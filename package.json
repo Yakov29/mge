@@ -2,14 +2,22 @@
   "name": "mge",
   "version": "1.0.0",
   "description": "",
+  "homepage": "yakov29.github.io/mge",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
