@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"farZc":[function(require,module,exports) {
+})({"jHeSP":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
+module.bundle.HMR_BUNDLE_ID = "7a402847c6f26226";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -583,12 +583,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"8lqZg":[function(require,module,exports) {
-var _test = require("./scripts/test");
+},{}],"5khkH":[function(require,module,exports) {
 
-},{"./scripts/test":"aagtO"}],"aagtO":[function(require,module,exports) {
-console.log(123);
+},{}]},["jHeSP","5khkH"], "5khkH", "parcelRequirecf3a")
 
-},{}]},["farZc","8lqZg"], "8lqZg", "parcelRequirecf3a")
-
-//# sourceMappingURL=index.975ef6c8.js.map
+//# sourceMappingURL=tab.c6f26226.js.map
