@@ -1,0 +1,156 @@
+header{
+    background-color: #001C27;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 135px;
+    display: flex;
+    align-items: center;
+    outline: 5px solid white;
+}
+
+// header .container{
+// }
+
+.home__body{
+    padding-top: 135px;
+}
+
+.header__logo{
+    color: #0ac6d0;
+    font-size: 50px;
+}
+
+.nav{
+    margin-left: 122px;
+}
+
+.nav__item{
+    margin-left: 80px;
+    font-size: 30px;
+    color: white;
+    font-weight: 400px;
+}
+
+.nav__item:first-child{
+    margin-left: 0;
+}
+
+.acount__chose{
+    display: flex;
+    margin-left: auto;
+}
+
+.main__acount__btn{
+    margin-left: 15px;
+    width: 150px;
+    height: 50px;
+    border-radius: 100px;
+    font-weight: 700px;
+    font-size: 15px;
+}
+
+.main__acount__btn:first-child{
+    margin-left: 0;
+    background-color: #2D9CDB;
+    color: #fff;
+}
+
+.hero{
+    flex-direction: column;
+    background-color: #001C27;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.first__title{
+    font-size: 64px;
+    color: #fff;
+    margin-bottom: 200px;
+    width: 836px;
+}
+
+.hero .container{
+    display: block;
+}
+
+.second__title{
+    text-align: center;
+    font-size: 64px;
+    color: #fff;
+}
+
+.try__btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    width: 370px;
+    height: 100px;
+    border-radius: 50px;
+    font-size: 48px;
+    color: #fff;
+    background-color: #2D9CDB;
+}
+
+.footer{
+    padding-top: 53px;
+    padding-bottom: 53px;
+    background-color: #001C27;
+    outline: 5px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.footer .container{
+    display: flex;
+}
+
+.footer__logo{
+    color: #0ac6d0;
+    font-size: 50px;
+}
+
+.footer__list{
+    margin-top: 25px;
+}
+
+.adress__item{
+    margin-bottom: 10px;
+}
+
+.adress__item:last-child{
+    margin-bottom: 0px;
+}
+
+.adress__link{
+    font-size: 20px;
+    color: white;
+}
+
+.work__send{
+    display: block;
+    margin-left: auto;
+}
+
+.work__title{
+    font-size: 20px;
+    color: #fff;
+}
+
+.work__send__btn{
+    background-color: #2D9CDB;
+    color: #fff;
+    width: 200px;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+.work__description{
+    margin-top: 20px;
+    color: #CFCFCF;
+}
