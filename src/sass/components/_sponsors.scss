@@ -1,100 +1,86 @@
-// :root {
-// 	--transparent-grey: rgba(0,0,0,0.5); 
-// }
+body {
+    font-family: Arial, sans-serif;
+}
 
-// /* Font for text */
-// body { 
-// 	font-family: "Helvetic Neue", Sans-serif; 
-// }
+.sponsor__title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 96px;
+    margin-bottom: 104px;
+    margin-top: 80px;
+}
 
-// /* Width of carousel */
-// #window, #slide-container {
-//  	width: 400px;
-// }
+#window {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
 
-// /* Height of carousel */
-// #slide-container {
-// 	height: 200px;
-// 	overflow: hidden; 
-// 	position: relative; 
-// }
+#slide-container {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
 
-// .slide {
-// 	width: 100%; 
-// 	min-height: 200px; 
-// }
+.slides {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 31px;
+    border-radius: 100px;
+}
 
-// .slides {
-// 	display: block; 
-// }
+.slides__image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
 
-// /* Style of arrows */
-// .arrow {
-// 	color: white; 
-// 	font-size: 26px; 
-// 	position: absolute; 
-// 	top: 50%; 
-// 	transform: translate(0%, -50%); 
-// 	padding: 16px; 
-// 	background-color: rgba(0,0,0,0); 
-// 	transition: background-color 0.3s ease; 
-// }
+.slides__text {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
 
-// .arrow:hover {
-// 	cursor: pointer;
-// 	background-color: var(--transparent-grey); 
-// }
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10; /* Ensure arrows are above the slides */
+}
 
-// #next {
-// 	left: 100%; 
-// 	transform: translate(-100%, -50%); 
-// 	border-radius: 4px 0px 0px 4px; 
-// }
+#previous {
+    left: 10px;
+}
 
-// #previous {
-// 	border-radius: 0px 4px 4px 0px; 
-// }
+#next {
+    right: 10px;
+}
 
-// #text-bar {
-// 	background-color: var(--transparent-grey);
-// 	width: 100%;
-// 	height: 36px; 
-// 	position: absolute; 
-// 	top: 100%;
-// 	transform: translate(0%, -100%);  
-// 	text-align: center; 
-// 	height: 36px;
-//   line-height: 36px;
-// }
+#dotsContainer {
+    text-align: center;
+    padding: 20px;
+}
 
-// #place {
-// 	padding: 0px;
-// 	margin: 0px; 
-// 	color: white;
-// 	position: relative;
-// 	display: inline-block;
-// }
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
-// #dotsContainer {
-// 	width: 100%;
-// 	height: 20px; 
-// 	text-align: center; 
-// }
-
-// .dots {
-// 	width: 8px;
-// 	height: 8px;
-// 	background-color: rgba(0,0,0,0.2); 
-// 	border-radius: 100%; 
-// 	display: inline-block; 
-// 	margin: 8px 2px; 
-// }
-
-// .dots:hover {
-// 	cursor: pointer; 
-// 	background-color: rgba(0,0,0,0.4);
-// }
-
-// .activeDot {
-// 	background-color: rgba(0,0,0,0.6); 
-// }
+.active {
+    background: black;
+}
