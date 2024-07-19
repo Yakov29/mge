@@ -88,20 +88,32 @@ button {
   text-align: center;
 }
 
+.login__title {
+  font-family: var(--font-family);
+  text-align: center;
+  color: #000;
+  font-size: 96px;
+  font-weight: 400;
+}
+
+.home__body {
+  margin: 0;
+  padding-top: 110px;
+  font-family: Roboto, sans-serif;
+}
+
 header {
+  box-sizing: border-box;
   background-color: #001c27;
   outline: 5px solid #fff;
   align-items: center;
   height: 135px;
+  padding: 0 20px;
   display: flex;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-}
-
-.home__body {
-  padding-top: 135px;
 }
 
 .header__logo {
@@ -115,33 +127,66 @@ header {
 
 .nav__item {
   color: #fff;
-  font-size: 30px;
-  font-weight: 400px;
   margin-left: 80px;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .nav__item:first-child {
   margin-left: 0;
 }
 
-.acount__chose {
+.account__choose {
+  align-items: center;
   margin-left: auto;
   display: flex;
 }
 
-.main__acount__btn {
-  font-weight: 700px;
+.main__account__btn {
+  cursor: pointer;
+  border: none;
   border-radius: 100px;
   width: 150px;
   height: 50px;
   margin-left: 15px;
   font-size: 15px;
+  font-weight: 700;
 }
 
-.main__acount__btn:first-child {
+.regButton {
   color: #fff;
   background-color: #2d9cdb;
-  margin-left: 0;
+}
+
+.logButton {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.profile__circle {
+  color: #fff;
+  cursor: pointer;
+  background-color: #2d9cdb;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  font-size: 24px;
+  display: flex;
+}
+
+.logoutButton {
+  color: #fff;
+  cursor: pointer;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 100px;
+  width: 100px;
+  height: 50px;
+  margin-left: 15px;
 }
 
 .hero {
@@ -190,10 +235,6 @@ header {
   display: flex;
 }
 
-.footer .container {
-  display: flex;
-}
-
 .footer__logo {
   color: #0ac6d0;
   font-size: 50px;
@@ -203,17 +244,18 @@ header {
   margin-top: 25px;
 }
 
-.adress__item {
+.address__item {
   margin-bottom: 10px;
 }
 
-.adress__item:last-child {
+.address__item:last-child {
   margin-bottom: 0;
 }
 
-.adress__link {
+.address__link {
   color: #fff;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .work__send {
@@ -228,7 +270,9 @@ header {
 
 .work__send__btn {
   color: #fff;
+  cursor: pointer;
   background-color: #2d9cdb;
+  border: none;
   border-radius: 30px;
   width: 200px;
   height: 50px;
@@ -237,8 +281,60 @@ header {
 }
 
 .work__description {
-  color: #cfcfcf;
+  color: #fff;
   margin-top: 20px;
+  font-size: 16px;
+}
+
+.register__modal, .login__modal {
+  z-index: 1000;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.change__invisible {
+  display: none;
+}
+
+.register__form, .login__form {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.register__input__box, .login__input__box {
+  margin-bottom: 20px;
+}
+
+.register__social, .login__social {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.register__more, .login__more {
+  color: #fff;
+  cursor: pointer;
+  background-color: #2d9cdb;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 body {

@@ -584,44 +584,230 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"8lqZg":[function(require,module,exports) {
+var _homeJs = require("./js/home.js");
 var _sponsorsJs = require("./js/sponsors.js");
+var _profileSystemJs = require("./js/profile/profileSystem.js");
+var _addProfileJs = require("./js/profile/addProfile.js");
 
-},{"./js/sponsors.js":"dGZZX"}],"dGZZX":[function(require,module,exports) {
-const slides = document.querySelectorAll(".slides");
-const next = document.getElementById("next");
-const previous = document.getElementById("previous");
-const dotsContainer = document.getElementById("dotsContainer");
-let currentIndex = 0;
-slides.forEach((_, index)=>{
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    if (index === currentIndex) dot.classList.add("active");
-    dotsContainer.appendChild(dot);
+},{"./js/home.js":"cEl3V","./js/sponsors.js":"dGZZX","./js/profile/profileSystem.js":"3rbMf","./js/profile/addProfile.js":"4GtSn"}],"cEl3V":[function(require,module,exports) {
+const registerButton = document.querySelector(".regButton");
+const registerModal = document.querySelector(".register__modal");
+const loginButton = document.querySelector(".logButton");
+const loginModal = document.querySelector(".login__modal");
+console.log(registerButton);
+console.log("test");
+registerButton.addEventListener("click", (e)=>{
+    registerModal.classList.remove("change__invisible");
 });
-function updateSlides() {
-    const slideWidth = document.getElementById("window").clientWidth;
-    document.getElementById("slide-container").style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-    document.querySelectorAll(".dot").forEach((dot, index)=>{
-        dot.classList.toggle("active", index === currentIndex);
-    });
-}
-next.addEventListener("click", ()=>{
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateSlides();
+loginButton.addEventListener("click", (e)=>{
+    loginModal.classList.remove("change__invisible");
 });
-previous.addEventListener("click", ()=>{
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateSlides();
-});
-dotsContainer.addEventListener("click", (event)=>{
-    if (event.target.classList.contains("dot")) {
-        currentIndex = Array.from(dotsContainer.children).indexOf(event.target);
-        updateSlides();
+
+},{}],"dGZZX":[function(require,module,exports) {
+// const slides = document.querySelectorAll('.slides');
+// const next = document.getElementById('next');
+// const previous = document.getElementById('previous');
+// const dotsContainer = document.getElementById('dotsContainer');
+// let currentIndex = 0;
+// slides.forEach((_, index) => {
+//     const dot = document.createElement('div');
+//     dot.classList.add('dot');
+//     if (index === currentIndex) dot.classList.add('active');
+//     dotsContainer.appendChild(dot);
+// });
+// function updateSlides() {
+//     const slideWidth = document.getElementById('window').clientWidth;
+//     document.getElementById('slide-container').style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+//     document.querySelectorAll('.dot').forEach((dot, index) => {
+//         dot.classList.toggle('active', index === currentIndex);
+//     });
+// }
+// next.addEventListener('click', () => {
+//     currentIndex = (currentIndex + 1) % slides.length;
+//     updateSlides();
+// });
+// previous.addEventListener('click', () => {
+//     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+//     updateSlides();
+// });
+// dotsContainer.addEventListener('click', (event) => {
+//     if (event.target.classList.contains('dot')) {
+//         currentIndex = Array.from(dotsContainer.children).indexOf(event.target);
+//         updateSlides();
+//     }
+// });
+// window.addEventListener('resize', updateSlides);
+// updateSlides();
+
+},{}],"3rbMf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "addProfile", ()=>addProfile);
+parcelHelpers.export(exports, "getProfiles", ()=>getProfiles);
+const baseURL = "https://669a78899ba098ed61ffc5a3.mockapi.io/accounts";
+const addProfile = async (profile)=>{
+    try {
+        const response = await fetch(baseURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(profile)
+        });
+        if (!response.ok) throw new Error("Network response was not ok");
+        return await response.json();
+    } catch (error) {
+        throw new Error(`Registration failed: ${error.message}`);
     }
+};
+const getProfiles = async ()=>{
+    try {
+        const response = await fetch(baseURL);
+        if (!response.ok) throw new Error("Network response was not ok");
+        return await response.json();
+    } catch (error) {
+        throw new Error(`Failed to fetch profiles: ${error.message}`);
+    }
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"4GtSn":[function(require,module,exports) {
+var _profileSystemJs = require("./profileSystem.js");
+document.addEventListener("DOMContentLoaded", ()=>{
+    const profileCircle = document.querySelector(".profile__circle");
+    const regButton = document.querySelector(".regButton");
+    const logButton = document.querySelector(".logButton");
+    const logoutButton = document.querySelector(".logoutButton");
+    const registerForm = document.querySelector(".register__form");
+    const loginForm = document.querySelector(".login__form");
+    const loginErrorMessage = loginForm ? loginForm.querySelector(".error-message") : null;
+    const registerErrorMessage = registerForm ? registerForm.querySelector(".error-message") : null;
+    const registerModal = document.querySelector(".register__modal");
+    const loginModal = document.querySelector(".login__modal");
+    const tryButton = document.querySelector(".tryButton"); // Кнопка "Сбробувати"
+    // Function to update the UI based on user login state
+    const updateUI = ()=>{
+        const userProfile = localStorage.getItem("userProfile");
+        if (profileCircle) {
+            if (userProfile) {
+                profileCircle.classList.remove("change__invisible");
+                if (logoutButton) logoutButton.classList.remove("change__invisible");
+                if (regButton) regButton.classList.add("change__invisible");
+                if (logButton) logButton.classList.add("change__invisible");
+                const user = JSON.parse(userProfile);
+                profileCircle.textContent = user.name[0].toUpperCase();
+            } else {
+                profileCircle.classList.add("change__invisible");
+                if (logoutButton) logoutButton.classList.add("change__invisible");
+                if (regButton) regButton.classList.remove("change__invisible");
+                if (logButton) logButton.classList.remove("change__invisible");
+            }
+        }
+    };
+    // Initial UI update
+    updateUI();
+    // Handle profile registration
+    if (registerForm) registerForm.addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        if (registerErrorMessage) registerErrorMessage.textContent = ""; // Clear previous error message
+        const profilename = e.target.elements.profilename.value;
+        const profilesurname = e.target.elements.profilesurname.value;
+        const profilelogin = e.target.elements.profilelogin.value;
+        const profilepassword = e.target.elements.profilepassword.value;
+        if (!profilename || !profilesurname || !profilelogin || !profilepassword) {
+            if (registerErrorMessage) registerErrorMessage.textContent = "Please fill in all fields";
+            return;
+        }
+        const profile = {
+            name: profilename,
+            surname: profilesurname,
+            login: profilelogin,
+            password: profilepassword
+        };
+        try {
+            await (0, _profileSystemJs.addProfile)(profile);
+            localStorage.setItem("userProfile", JSON.stringify(profile));
+            updateUI(); // Update UI to show profile circle and logout button
+            if (registerModal) registerModal.classList.add("change__invisible"); // Close the registration modal
+        } catch (error) {
+            if (registerErrorMessage) registerErrorMessage.textContent = "Registration failed. Please try again.";
+            console.error("Registration failed:", error);
+        }
+    });
+    // Handle user login
+    if (loginForm) loginForm.addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        if (loginErrorMessage) loginErrorMessage.textContent = ""; // Clear previous error message
+        const profilelogin = e.target.elements.profilelogin.value;
+        const profilepassword = e.target.elements.profilepassword.value;
+        if (!profilelogin || !profilepassword) {
+            if (loginErrorMessage) loginErrorMessage.textContent = "Please fill in all fields";
+            return;
+        }
+        try {
+            const profiles = await (0, _profileSystemJs.getProfiles)();
+            const user = profiles.find((profile)=>profile.login === profilelogin && profile.password === profilepassword);
+            if (user) {
+                localStorage.setItem("userProfile", JSON.stringify(user));
+                updateUI(); // Update UI to show profile circle and logout button
+                if (loginModal) loginModal.classList.add("change__invisible"); // Close the login modal
+            } else if (loginErrorMessage) loginErrorMessage.textContent = "Invalid login or password. Please try again.";
+        } catch (error) {
+            if (loginErrorMessage) loginErrorMessage.textContent = "Login failed. Please try again.";
+            console.error("Login failed:", error);
+        }
+    });
+    // Handle user logout
+    if (profileCircle) profileCircle.addEventListener("click", ()=>{
+        localStorage.removeItem("userProfile");
+        updateUI(); // Update UI to hide profile circle and logout button
+    });
+    if (logoutButton) logoutButton.addEventListener("click", ()=>{
+        localStorage.removeItem("userProfile");
+        updateUI(); // Update UI to hide profile circle and logout button
+    });
+    // Show the appropriate modal on button clicks
+    if (regButton) regButton.addEventListener("click", ()=>{
+        if (registerModal) registerModal.classList.remove("change__invisible");
+    });
+    if (logButton) logButton.addEventListener("click", ()=>{
+        if (loginModal) loginModal.classList.remove("change__invisible");
+    });
+    // Show the registration modal when "Сбробувати" is clicked
+    if (tryButton) tryButton.addEventListener("click", ()=>{
+        if (registerModal) registerModal.classList.remove("change__invisible");
+    });
 });
-window.addEventListener("resize", updateSlides);
-updateSlides();
 
-},{}]},["farZc","8lqZg"], "8lqZg", "parcelRequirecf3a")
+},{"./profileSystem.js":"3rbMf"}]},["farZc","8lqZg"], "8lqZg", "parcelRequirecf3a")
 
-//# sourceMappingURL=sponsors.975ef6c8.js.map
+//# sourceMappingURL=index.975ef6c8.js.map
