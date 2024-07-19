@@ -5,7 +5,8 @@
   "homepage": "https://yakov29.github.io/mge",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/*.html",
+    "build": "parcel build src/index.html --public-url /mge/",
+    "profiles": "npx json-server profiles.json",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
@@ -17,6 +18,8 @@
     "sass": "^1.77.8"
   },
   "dependencies": {
-    "gh-pages": "^6.1.1"
+    "axios": "^1.7.2",
+    "gh-pages": "^6.1.1",
+    "json-server": "^1.0.0-beta.1"
   }
 }

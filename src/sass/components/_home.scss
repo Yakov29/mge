@@ -1,4 +1,10 @@
-header{
+.home__body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding-top: 110px;
+}
+
+header {
     background-color: #001C27;
     position: fixed;
     top: 0;
@@ -7,55 +13,84 @@ header{
     height: 135px;
     display: flex;
     align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
     outline: 5px solid white;
 }
 
-// header .container{
-// }
-
-.home__body{
-    padding-top: 135px;
-}
-
-.header__logo{
+.header__logo {
     color: #0ac6d0;
     font-size: 50px;
 }
 
-.nav{
+.nav {
     margin-left: 122px;
 }
 
-.nav__item{
+.nav__item {
     margin-left: 80px;
     font-size: 30px;
     color: white;
-    font-weight: 400px;
+    font-weight: 400;
+    text-decoration: none;
 }
 
-.nav__item:first-child{
+.nav__item:first-child {
     margin-left: 0;
 }
 
-.acount__chose{
+.account__choose {
     display: flex;
+    align-items: center;
     margin-left: auto;
 }
 
-.main__acount__btn{
+.main__account__btn {
     margin-left: 15px;
     width: 150px;
     height: 50px;
     border-radius: 100px;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 15px;
+    border: none;
+    cursor: pointer;
 }
 
-.main__acount__btn:first-child{
-    margin-left: 0;
+.regButton {
     background-color: #2D9CDB;
     color: #fff;
 }
+
+.logButton {
+    background-color: #6C757D;
+    color: #fff;
+}
+
+.profile__circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2D9CDB;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.logoutButton {
+    background-color: #DC3545;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    height: 50px;
+    width: 100px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
 
 .hero{
     flex-direction: column;
@@ -94,7 +129,7 @@ header{
     background-color: #2D9CDB;
 }
 
-.footer{
+.footer {
     padding-top: 53px;
     padding-bottom: 53px;
     background-color: #001C27;
@@ -103,54 +138,104 @@ header{
     align-items: center;
 }
 
-.footer .container{
-    display: flex;
-}
-
-.footer__logo{
+.footer__logo {
     color: #0ac6d0;
     font-size: 50px;
 }
 
-.footer__list{
+.footer__list {
     margin-top: 25px;
 }
 
-.adress__item{
+.address__item {
     margin-bottom: 10px;
 }
 
-.adress__item:last-child{
+.address__item:last-child {
     margin-bottom: 0px;
 }
 
-.adress__link{
+.address__link {
     font-size: 20px;
     color: white;
+    text-decoration: none;
 }
 
-.work__send{
+.work__send {
     display: block;
     margin-left: auto;
 }
 
-.work__title{
+.work__title {
     font-size: 20px;
     color: #fff;
 }
 
-.work__send__btn{
+.work__send__btn {
     background-color: #2D9CDB;
     color: #fff;
     width: 200px;
     font-size: 16px;
-    width: 200px;
     height: 50px;
     margin-top: 40px;
     border-radius: 30px;
+    border: none;
+    cursor: pointer;
 }
 
-.work__description{
+.work__description {
     margin-top: 20px;
-    color: #CFCFCF;
+    font-size: 16px;
+    color: #fff;
+}
+
+.register__modal, .login__modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.change__invisible {
+    display: none;
+}
+
+.register__form, .login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register__input__box, .login__input__box {
+    margin-bottom: 20px;
+}
+
+.register__social, .login__social {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+.register__more, .login__more {
+    background-color: #2D9CDB;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
 }
