@@ -4,39 +4,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/main.scss">
     <title>Document</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .course-button {
+            background-color: #001c27;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        .course-button:hover {
+            background-color: #0ac6d0;
+        }
+
+        .added-courses {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #001c27;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+        }
+
+        .course-box {
+            border: 1px solid #001c27;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+        }
+
+        .course-link {
+            color: #001c27;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .course-link:hover {
+            text-decoration: underline;
+        }
+
+        .modal h2 {
+            margin-top: 0;
+        }
+
+        .course-list-item {
+            list-style: none;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #001c27;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+        }
+
+        .course-list-item a {
+            color: #001c27;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .course-list-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
     <div class="tab">
-        <a href="../../index.html"><span class="tab__logo__text">ED</span></a>
+        <a href="../index.html"><span class="tab__logo__text">ED</span></a>
         <a href="../pages/dashboard.html"> <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" /></a>
         <ul class="tab__list">
             <li class="tab__list__item">
-                <img class="tab__list__item__svg" src="../../svg/school.svg" alt="">
+                <a href="./courses.html">
+                    <img class="tab__list__item__svg" src="../svg/school.svg" alt="School" />
+                </a>
             </li>
             <li class="tab__list__item">
-                <img class="tab__list__item__svg" src="../../svg/emoji_objects.svg" alt="">
+                <a href="./lessons.html">
+                    <img class="tab__list__item__svg" src="../svg/emoji_objects.svg" alt="Emoji Objects" />
+                </a>
             </li>
             <li class="tab__list__item">
-                <img class="tab__list__item__svg" src="../../svg/chat.svg" alt="">
-            </li>
-            <li class="tab__list__item">
-                <img class="tab__list__item__svg" src="../../svg/wifi_tethering.svg" alt="">
+                <a href="./rewiews.html">
+                    <img class="tab__list__item__svg" src="../svg/chat.svg" alt="Chat" />
+                </a>
             </li>
         </ul>
-        <button class="tab__profile"><img src="../../images/Image-profile тАУ ¦¦¦-¦¬TЦTП.png" alt=""></button>
+        <button type="button" class="tab__profile">
+            <img src="../svg/account_circle.svg" alt="" />
+        </button>
     </div>
-    <div class="user__settings">
-        <form class="user__settings__modal">
-            <button class="user__settings__modal__logout"><img src="../../svg/logout.svg" alt=""> Вийти</button>
-            <button class="user__settings__modal__profile"><img src="../../svg/account_circle.svg" alt="">
-                Профіль</button>
-        </form>
+    <button id="showCourses" class="course-button">Показати курси</button>
+    <div class="added-courses" id="addedCourses">
+        <h3>Додані курси:</h3>
     </div>
-    <div class="settings">
-        <input placeholder="Пошук" type="text">
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Виберіть курс</h2>
+            <ul id="courseList">
+                <li class="course-list-item"><a href="../learning/lessons1.html" class="course-link" data-id="1" data-name="Хімія 101">Хімія 101</a></li>
+                <li class="course-list-item"><a href="../learning/lessons2.html" class="course-link" data-id="2" data-name="Органічна хімія">Органічна хімія</a></li>
+                <li class="course-list-item"><a href="../learning/lessons3.html" class="course-link" data-id="3" data-name="Аналітична хімія">Аналітична хімія</a></li>
+            </ul>
+        </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userProfile = JSON.parse(localStorage.getItem('userProfile')) || {};
+            const showCoursesButton = document.getElementById('showCourses');
+            const courseModal = document.getElementById('courseModal');
+            const closeModal = document.querySelector('.close');
+            const courseList = document.getElementById('courseList');
+            const addedCourses = document.getElementById('addedCourses');
+
+            const renderAddedCourses = () => {
+                addedCourses.innerHTML = '<h3>Додані курси:</h3>';
+                if (userProfile.courses && userProfile.courses.length > 0) {
+                    userProfile.courses.forEach(course => {
+                        const courseBox = document.createElement('div');
+                        courseBox.classList.add('course-box');
+                        const a = document.createElement('a');
+                        a.textContent = course.name;
+                        a.href = course.link;
+                        a.classList.add('course-link');
+                        courseBox.appendChild(a);
+                        addedCourses.appendChild(courseBox);
+                    });
+                }
+            };
+
+            const addCourse = async (course) => {
+                if (!userProfile.courses) {
+                    userProfile.courses = [];
+                }
+
+                if (!userProfile.courses.find(c => c.id === course.id)) {
+                    userProfile.courses.push(course);
+                    localStorage.setItem('userProfile', JSON.stringify(userProfile));
+                    await saveCourseToAPI(userProfile);
+                    renderAddedCourses();
+                    alert(`Курс ${course.name} додано до вашого профілю`);
+                } else {
+                    alert('Цей курс вже додано до вашого профілю');
+                }
+            };
+
+            const saveCourseToAPI = async (profile) => {
+                try {
+                    await fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${profile.id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(profile)
+                    });
+                } catch (error) {
+                    console.error('Помилка при збереженні курсу до API', error);
+                }
+            };
+
+            showCoursesButton.onclick = () => {
+                courseModal.style.display = 'block';
+            };
+
+            closeModal.onclick = () => {
+                courseModal.style.display = 'none';
+            };
+
+            window.onclick = (event) => {
+                if (event.target == courseModal) {
+                    courseModal.style.display = 'none';
+                }
+            };
+
+            courseList.addEventListener('click', (event) => {
+                if (event.target.classList.contains('course-link')) {
+                    event.preventDefault();
+                    const link = event.target;
+                    const course = {
+                        id: parseInt(link.getAttribute('data-id')),
+                        name: link.getAttribute('data-name'),
+                        link: link.getAttribute('href')
+                    };
+                    addCourse(course);
+                    link.style.display = 'none';
+                }
+            });
+
+            renderAddedCourses();
+        });
+    </script>
 </body>
 
 </html>

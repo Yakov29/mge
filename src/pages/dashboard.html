@@ -11,6 +11,22 @@
     />
     <link rel="stylesheet" href="../sass/main.scss" />
     <title>Document</title>
+    <style>
+      .tab__profile {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #001c27;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
   </head>
 
   <body class="tab__body">
@@ -19,44 +35,23 @@
       <a href="../pages/dashboard.html"> <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" /></a>
       <ul class="tab__list">
         <li class="tab__list__item">
-          <a href="../pages/lessons.html">
-            <img
-              class="tab__list__item__svg"
-              src="../svg/school.svg"
-              alt="School"
-            />
+          <a href="./courses.html">
+            <img class="tab__list__item__svg" src="../svg/school.svg" alt="School" />
           </a>
         </li>
         <li class="tab__list__item">
-          <a href="/emoji_objects">
-            <img
-              class="tab__list__item__svg"
-              src="../svg/emoji_objects.svg"
-              alt="Emoji Objects"
-            />
+          <a href="../pages/lessons.html">
+            <img class="tab__list__item__svg" src="../svg/emoji_objects.svg" alt="Emoji Objects" />
           </a>
         </li>
         <li class="tab__list__item">
           <a href="../pages/rewiews.html">
-            <img
-              class="tab__list__item__svg"
-              src="../svg/chat.svg"
-              alt="Chat"
-            />
-          </a>
-        </li>
-        <li class="tab__list__item">
-          <a href="/wifi_tethering">
-            <img
-              class="tab__list__item__svg"
-              src="../svg/wifi_tethering.svg"
-              alt="WiFi Tethering"
-            />
+            <img class="tab__list__item__svg" src="../svg/chat.svg" alt="Chat" />
           </a>
         </li>
       </ul>
       <button type="button" class="tab__profile">
-        <img src="../svg/account_circle.svg" alt="" />
+        <!-- Контент будет заполняться через JavaScript -->
       </button>
     </div>
     <h1 class="dashboard__title">Дошка</h1>
@@ -68,5 +63,23 @@
         у школах та інститутах навчається понад 20 % населення Землі.
       </p>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const profileButton = document.querySelector(".tab__profile");
+
+        const updateProfileButton = () => {
+          const userProfile = localStorage.getItem("userProfile");
+          if (userProfile) {
+            const user = JSON.parse(userProfile);
+            profileButton.textContent = user.name[0].toUpperCase();
+          } else {
+            profileButton.textContent = "";
+          }
+        };
+
+        updateProfileButton();
+      });
+    </script>
   </body>
 </html>
