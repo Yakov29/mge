@@ -39,6 +39,7 @@ header {
   margin-left: 0;
 }
 
+
 .account__choose {
   display: flex;
   align-items: center;
@@ -247,8 +248,30 @@ header {
   text-decoration: none;
   line-height: 100px;
 }
+.cross__svg {
+  opacity: 0.4;
+  position: absolute;
+right: 20;
+top: 10;
+}
+.cross__svg:hover {
+  opacity: 1;
+  animation-duration: 3s;
+  transform: rotateZ(70deg);
 
+}
+
+.cross__svg2 {
+  position: absolute;
+right: 20;
+top: 10;
+}
+.register__title {
+  position: relative;
+}
 .login__title {
+  position: relative;
+
   font-weight: 400;
   font-size: 96px;
   text-align: center;
