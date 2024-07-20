@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url /mge/",
-    "profiles": "npx json-server profiles.json",
+    "server": "npx json-server reviews.json",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },

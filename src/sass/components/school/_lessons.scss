@@ -1,0 +1,41 @@
+.lessons__title{
+    font-size: 64px;
+    margin-top: 40px;
+}
+
+.lessons__chapter-title{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.lessons__chapter{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lessons__lesson{
+    width: 250px;
+    height: 50px;
+    margin-left: 40px;
+    background-color: #001C27;
+    color: white;
+    font-size: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.lessons__lesson:first-child{
+    margin-left: 0;
+}
+
+.lessons__lesson-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 32px;
+}
