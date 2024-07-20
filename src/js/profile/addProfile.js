@@ -1,3 +1,5 @@
+import { addProfile, getProfiles } from "./profileSystem.js";
+
 document.addEventListener("DOMContentLoaded", () => {
     const profileCircle = document.querySelector(".profile__circle");
     const regButton = document.querySelector(".regButton");
@@ -57,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             try {
+                console.log("Registering profile:", profile); // Debugging statement
                 await addProfile(profile);
                 localStorage.setItem("userProfile", JSON.stringify(profile));
                 updateUI();
@@ -82,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             try {
+                console.log("Logging in with:", profilelogin); // Debugging statement
                 const profiles = await getProfiles();
                 const user = profiles.find(profile => profile.login === profilelogin && profile.password === profilepassword);
 
