@@ -1,19 +1,16 @@
-import { addProfile, getProfiles } from "./profileSystem.js";
-
 document.addEventListener("DOMContentLoaded", () => {
     const profileCircle = document.querySelector(".profile__circle");
     const regButton = document.querySelector(".regButton");
     const logButton = document.querySelector(".logButton");
-    const logoutButton = document.querySelector(".logoutButton");
+    const logoutButton = document.querySelector("#logout-button");
     const registerForm = document.querySelector(".register__form");
     const loginForm = document.querySelector(".login__form");
     const loginErrorMessage = loginForm ? loginForm.querySelector('.error-message') : null;
     const registerErrorMessage = registerForm ? registerForm.querySelector('.error-message') : null;
     const registerModal = document.querySelector(".register__modal");
     const loginModal = document.querySelector(".login__modal");
-    const tryButton = document.querySelector(".tryButton"); // Кнопка "Сбробувати"
+    const tryButton = document.querySelector(".tryButton");
 
-    // Function to update the UI based on user login state
     const updateUI = () => {
         const userProfile = localStorage.getItem("userProfile");
 
@@ -35,14 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Initial UI update
     updateUI();
 
-    // Handle profile registration
     if (registerForm) {
         registerForm.addEventListener("submit", async (e) => {
             e.preventDefault();
-            if (registerErrorMessage) registerErrorMessage.textContent = ''; // Clear previous error message
+            if (registerErrorMessage) registerErrorMessage.textContent = '';
 
             const profilename = e.target.elements.profilename.value;
             const profilesurname = e.target.elements.profilesurname.value;
@@ -64,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 await addProfile(profile);
                 localStorage.setItem("userProfile", JSON.stringify(profile));
-                updateUI(); // Update UI to show profile circle and logout button
-                if (registerModal) registerModal.classList.add("change__invisible"); // Close the registration modal
+                updateUI();
+                if (registerModal) registerModal.classList.add("change__invisible");
             } catch (error) {
                 if (registerErrorMessage) registerErrorMessage.textContent = 'Registration failed. Please try again.';
                 console.error("Registration failed:", error);
@@ -73,11 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Handle user login
     if (loginForm) {
         loginForm.addEventListener("submit", async (e) => {
             e.preventDefault();
-            if (loginErrorMessage) loginErrorMessage.textContent = ''; // Clear previous error message
+            if (loginErrorMessage) loginErrorMessage.textContent = '';
 
             const profilelogin = e.target.elements.profilelogin.value;
             const profilepassword = e.target.elements.profilepassword.value;
@@ -93,8 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (user) {
                     localStorage.setItem("userProfile", JSON.stringify(user));
-                    updateUI(); // Update UI to show profile circle and logout button
-                    if (loginModal) loginModal.classList.add("change__invisible"); // Close the login modal
+                    updateUI();
+                    if (loginModal) loginModal.classList.add("change__invisible");
                 } else {
                     if (loginErrorMessage) loginErrorMessage.textContent = 'Invalid login or password. Please try again.';
                 }
@@ -105,22 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Handle user logout
-    if (profileCircle) {
-        profileCircle.addEventListener("click", () => {
-            localStorage.removeItem("userProfile");
-            updateUI(); // Update UI to hide profile circle and logout button
-        });
-    }
-
     if (logoutButton) {
         logoutButton.addEventListener("click", () => {
             localStorage.removeItem("userProfile");
-            updateUI(); // Update UI to hide profile circle and logout button
+            updateUI();
         });
     }
 
-    // Show the appropriate modal on button clicks
     if (regButton) {
         regButton.addEventListener("click", () => {
             if (registerModal) registerModal.classList.remove("change__invisible");
@@ -133,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Show the registration modal when "Сбробувати" is clicked
     if (tryButton) {
         tryButton.addEventListener("click", () => {
             if (registerModal) registerModal.classList.remove("change__invisible");
