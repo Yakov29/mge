@@ -7,10 +7,15 @@
     <title>Document</title>
     <style>
         .tab__list__item a {
-            display: inline-block;
-            padding: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px; /* Устанавливаем ширину и высоту, чтобы создать круг */
+            height: 40px;
             border-radius: 50%;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, border 0.3s ease;
+            text-decoration: none; /* Убираем подчеркивание у ссылок */
+            border: 2px solid transparent; /* Задаем прозрачный бордер, чтобы сохранить размер */
         }
 
         .tab__list__item a.active {
@@ -62,11 +67,12 @@
     <script src="../js/courses.js" type="module"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const currentPath = window.location.pathname;
+            const currentPath = window.location.pathname.split('/').pop();
             const tabLinks = document.querySelectorAll('.tab__list__item a');
 
             tabLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPath) {
+                const href = link.getAttribute('href').split('/').pop();
+                if (href === currentPath) {
                     link.classList.add('active');
                 } else {
                     link.classList.remove('active');
