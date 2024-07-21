@@ -84,3 +84,7 @@
 .tab__body {
   padding-left: 200px;
 }
+
+.tab__list__item a.active img {
+  border: 2px solid #007bff; /* Highlight color for active tab */
+}

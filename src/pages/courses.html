@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../sass/main.scss">
     <title>Document</title>
-</head>
+    <style>
+        .tab__list__item a {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
 
+        .tab__list__item a.active {
+            background-color: #007bff;
+            border: 2px solid #0056b3;
+        }
+    </style>
+</head>
 <body class="tab__body">
     <div class="tab">
         <a href="../index.html"><span class="tab__logo__text">ED</span></a>
-        <a href="../pages/dashboard.html"> <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" /></a>
+        <a href="../pages/dashboard.html">
+            <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" />
+        </a>
         <ul class="tab__list">
             <li class="tab__list__item">
                 <a href="./courses.html">
@@ -41,12 +54,25 @@
             <h2>Виберіть курс</h2>
             <ul id="courseList">
                 <li class="course-list-item"><a href="../pages/lessons1.html" class="course-link" data-id="1" data-name="Хімія 101">Хімія 101</a></li>
-                <li class="course-list-item"><a href="../pages/lessons2.html" class="course-link" data-id="2" data-name="Органічна хімія">Органічна хімія</a></li>
+                <li class="course-list-item"><a href="../pages/lessons.html" class="course-link" data-id="2" data-name="Органічна хімія">Органічна хімія</a></li>
                 <li class="course-list-item"><a href="../pages/lessons3.html" class="course-link" data-id="3" data-name="Аналітична хімія">Аналітична хімія</a></li>
             </ul>
         </div>
     </div>
-    <script type="module" src="../js/courses.js"></script>
-</body>
+    <script src="../js/courses.js" type="module"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname;
+            const tabLinks = document.querySelectorAll('.tab__list__item a');
 
+            tabLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
 </html>

@@ -14,4 +14,7 @@ body{
     display: none;
 }
 
+.tab__list__item a.active img {
+  border: 2px solid #007bff; /* Highlight color for active tab */
+}
 

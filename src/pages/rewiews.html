@@ -8,6 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../sass/main.scss">
     <title>Document</title>
+    <style>
+        .tab__list__item a {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab__list__item a.active {
+            background-color: #007bff;
+            border: 2px solid #0056b3;
+        }
+    </style>
 </head>
 
 <body class="tab__body">
@@ -69,6 +82,17 @@
                     profileCircle.style.display = "none";
                 }
             };
+
+            const currentPath = window.location.pathname;
+            const tabLinks = document.querySelectorAll('.tab__list__item a');
+
+            tabLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
 
             updateProfileButton();
         });
