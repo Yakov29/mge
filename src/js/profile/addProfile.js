@@ -1,10 +1,12 @@
-import { addProfile, getProfiles } from "./profileSystem.js";
+import { getProfiles } from "./profileSystem";
+import { addProfile } from "./profileSystem"; // Убедитесь, что у вас есть функция для добавления профиля
 
 document.addEventListener("DOMContentLoaded", () => {
     const profileCircle = document.querySelector(".profile__circle");
     const regButton = document.querySelector(".regButton");
     const logButton = document.querySelector(".logButton");
     const logoutButton = document.querySelector("#logout-button");
+    const boardLink = document.querySelector("#board-link"); // Изменено на ссылку
     const registerForm = document.querySelector(".register__form");
     const loginForm = document.querySelector(".login__form");
     const loginErrorMessage = loginForm ? loginForm.querySelector('.error-message') : null;
@@ -20,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (userProfile) {
                 profileCircle.classList.remove("change__invisible");
                 if (logoutButton) logoutButton.classList.remove("change__invisible");
+                if (boardLink) boardLink.classList.remove("change__invisible"); // Показать ссылку "Дошка"
                 if (regButton) regButton.classList.add("change__invisible");
                 if (logButton) logButton.classList.add("change__invisible");
 
@@ -28,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 profileCircle.classList.add("change__invisible");
                 if (logoutButton) logoutButton.classList.add("change__invisible");
+                if (boardLink) boardLink.classList.add("change__invisible"); // Скрыть ссылку "Дошка"
                 if (regButton) regButton.classList.remove("change__invisible");
                 if (logButton) logButton.classList.remove("change__invisible");
             }

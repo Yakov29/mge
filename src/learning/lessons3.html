@@ -1,42 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../sass/main.scss" />
+  <title>Аналітична хімія</title>
+  <style>
+    /* Styles for lessons */
+    #lessonsContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    #lessonsContainer button {
+      background-color: #001c27;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #lessonsContainer button:hover {
+      background-color: #003045;
+    }
+
+    /* Styles for the lesson modal */
+    #lessonModal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+    }
+
+    #lessonContent {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    #completeLessonButton {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #001c27;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #completeLessonButton:hover {
+      background-color: #003045;
+    }
+
+    /* Styles for profile circle */
+    .profile-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #007bff;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
-<body>
-    <div class="tab">
-        <a href="../../index.html"><span class="tab__logo__text">ED</span></a>
-        <img class="tab__mainicon" src="../../svg/dashboard.svg" alt="">
-        <ul class="tab__list">
-            <li class="tab__list__item">
-                <img class="tab__list__item__svg" src="../../svg/school.svg" alt="">
-            </li>
-            <li class="tab__list__item">
-                <img class="tab__list__item__svg" src="../../svg/emoji_objects.svg" alt="">
-            </li>
-            <li class="tab__list__item">
-                <img class="tab__list__item__svg" src="../../svg/chat.svg" alt="">
-            </li>
-            <li class="tab__list__item">
-                <img class="tab__list__item__svg" src="../../svg/wifi_tethering.svg" alt="">
-            </li>
-        </ul>
-        <button class="tab__profile"><img src="../../images/Image-profile тАУ ¦¦¦-¦¬TЦTП.png" alt=""></button>
+<body class="tab__body">
+  <div class="tab">
+    <a href="../index.html"><span class="tab__logo__text">ED</span></a>
+    <a href="../pages/dashboard.html">
+      <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" />
+    </a>
+    <ul class="tab__list">
+      <li class="tab__list__item">
+        <a href="../pages/courses.html">
+          <img class="tab__list__item__svg" src="../svg/school.svg" alt="School" />
+        </a>
+      </li>
+      <li class="tab__list__item">
+        <a href="../pages/lessons.html">
+          <img class="tab__list__item__svg" src="../svg/emoji_objects.svg" alt="Emoji Objects" />
+        </a>
+      </li>
+      <li class="tab__list__item">
+        <a href="../pages/rewiews.html">
+          <img class="tab__list__item__svg" src="../svg/chat.svg" alt="Chat" />
+        </a>
+      </li>
+    </ul>
+    <a href="../pages/settings.html" id="profileCircle" class="profile-circle"></a>
+  </div>
+
+  <div id="lessonsContainer">
+    <!-- Buttons for lessons will be added here by JavaScript -->
+  </div>
+
+  <!-- Lesson Modal -->
+  <div id="lessonModal">
+    <div id="lessonContent">
+      <!-- Lesson content will be added here -->
     </div>
-    <div class="user__settings">
-        <form class="user__settings__modal">
-            <button class="user__settings__modal__logout"><img src="../../svg/logout.svg" alt=""> Вийти</button>
-            <button class="user__settings__modal__profile"><img src="../../svg/account_circle.svg" alt="">
-                Профіль</button>
-        </form>
-    </div>
-    <div class="settings">
-        <input placeholder="Пошук" type="text">
-    </div>
+    <button id="completeLessonButton">Завершити урок</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lessons = [
+        {
+          id: 1,
+          name: "Основи аналітичної хімії",
+          content: `Аналітична хімія є галуззю хімії, яка займається вивченням складу речовин і визначенням їхніх компонентів. У цьому уроці ми розглянемо основи аналітичних методів, таких як якісний і кількісний аналіз. Якісний аналіз допомагає виявити присутність певних елементів або сполук у зразку, тоді як кількісний аналіз дозволяє визначити їхню концентрацію. Вивчимо основи лабораторних методів, таких як титрування, спектроскопія та хроматографія. Цей урок надасть знання про основи аналітичних методів і їхнє застосування в науці і промисловості.`
+        },
+        {
+          id: 2,
+          name: "Методи якісного аналізу",
+          content: `Якісний аналіз в аналітичній хімії є методикою, яка дозволяє визначити наявність певних іонів або молекул у зразку. У цьому уроці ми розглянемо різні методи якісного аналізу, такі як реакції осадження, кольорові реакції і тестування на присутність певних елементів. Вивчимо, як використовувати хімічні реакції для виявлення різних компонентів у зразках. Обговоримо основи роботи з хімічними реактивами, інструментами і техніками, які використовуються для якісного аналізу.`
+        },
+        {
+          id: 3,
+          name: "Методи кількісного аналізу",
+          content: `Кількісний аналіз в аналітичній хімії дозволяє визначити точну концентрацію компонентів у зразку. У цьому уроці ми розглянемо різні методи кількісного аналізу, включаючи титрування, спектрофотометрію і мас-спектрометрію. Вивчимо основи титрування, техніку додавання реактиву до зразка до досягнення точки еквівалентності. Обговоримо використання спектрофотометрії для вимірювання поглинання світла певної довжини хвилі і мас-спектрометрії для визначення молекулярної маси і складу зразка.`
+        },
+        {
+          id: 4,
+          name: "Хроматографічні методи",
+          content: `Хроматографія є технікою розділення компонентів суміші на основі їхніх фізико-хімічних властивостей. У цьому уроці ми розглянемо різні види хроматографії, такі як тонкошарова хроматографія (ТСХ), рідинна хроматографія (РХ) і газова хроматографія (ГХ). Вивчимо, як використовувати ці методи для розділення і аналізу компонентів суміші. Обговоримо принципи роботи хроматографічних колонок, стаціонарних і рухомих фаз, а також інтерпретацію хроматографічних даних.`
+        },
+        {
+          id: 5,
+          name: "Сучасні аналітичні техніки",
+          content: `Сучасні аналітичні техніки постійно розвиваються, впроваджуючи нові методи і інструменти для аналізу речовин. У цьому уроці ми розглянемо новітні технології, такі як атомно-абсорбційна спектроскопія, мас-спектрометрія з індуктивно зв'язаною плазмою і ядерний магнітний резонанс (ЯМР). Вивчимо, як ці техніки використовуються для аналізу різних матеріалів, включаючи біологічні зразки, довкілля і промислові продукти. Обговоримо їхні переваги і обмеження в порівнянні з традиційними методами аналітичної хімії.`
+        }
+      ];
+
+      const lessonsContainer = document.getElementById("lessonsContainer");
+      const lessonModal = document.getElementById("lessonModal");
+      const lessonContent = document.getElementById("lessonContent");
+      const completeLessonButton = document.getElementById("completeLessonButton");
+
+      // Add lesson buttons
+      lessons.forEach(lesson => {
+        const button = document.createElement("button");
+        button.textContent = lesson.name;
+        button.addEventListener("click", () => {
+          lessonContent.innerHTML = `
+            <h2>${lesson.name}</h2>
+            <p>${lesson.content}</p>
+          `;
+          completeLessonButton.setAttribute("data-lesson-id", lesson.id);
+          lessonModal.style.display = "flex";
+        });
+        lessonsContainer.appendChild(button);
+      });
+
+      // Handle lesson completion
+      completeLessonButton.addEventListener("click", () => {
+        const lessonId = completeLessonButton.getAttribute("data-lesson-id");
+        const userProfile = JSON.parse(localStorage.getItem("userProfile"));
+        if (userProfile) {
+          fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${userProfile.id}`, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              ...userProfile,
+              courses: userProfile.courses.map(course =>
+                course.id === parseInt(lessonId) ? { ...course, completed: true } : course
+              )
+            })
+          })
+          .then(response => response.json())
+          .then(() => {
+            lessonModal.style.display = "none";
+          });
+        }
+      });
+
+      // Close modal when clicking outside
+      window.addEventListener("click", (event) => {
+        if (event.target === lessonModal) {
+          lessonModal.style.display = "none";
+        }
+      });
+
+      // Profile circle setup
+      const profileButton = document.querySelector("#profileCircle");
+
+      const updateProfileButton = () => {
+        const userProfile = localStorage.getItem("userProfile");
+        if (userProfile) {
+          const user = JSON.parse(userProfile);
+          profileButton.textContent = user.name[0].toUpperCase();
+        } else {
+          profileButton.style.display = "none";
+        }
+      };
+
+      updateProfileButton();
+    });
+  </script>
 </body>
 
 </html>

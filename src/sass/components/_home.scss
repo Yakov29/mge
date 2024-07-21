@@ -79,7 +79,7 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #007bff;
+  background-color: #2D9CDB;
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -327,4 +327,20 @@ header {
 
 .logout__button:hover {
   background-color: #c82333;
+}
+
+
+.board__button{
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  background-color: #2D9CDB;
+  color: white;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 }
