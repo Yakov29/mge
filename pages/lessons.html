@@ -1,1 +1,79 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><link rel="stylesheet" href="/mge/index.adf72e1b.css"><title>Document</title><style>.tab__list__item a{border-radius:50%;justify-content:center;align-items:center;width:40px;height:40px;text-decoration:none;transition:background-color .3s,border .3s;display:flex}.tab__list__item a.active{background-color:#007bff;border:2px solid #0056b3}.tab__mainicon{width:24px}</style></head><body class="tab__body"> <div class="tab"> <a href="/mge/index.html"><span class="tab__logo__text">ED</span></a> <a href="/mge/pages/dashboard.html"> <img class="tab__mainicon" src="/mge/dashboard.c1601abe.svg" alt> </a> <ul class="tab__list"> <li class="tab__list__item"> <a href="/mge/pages/courses.html"> <img class="tab__list__item__svg" src="/mge/school.185c1a10.svg" alt="School"> </a> </li> <li class="tab__list__item"> <a href="/mge/pages/lessons.html"> <img class="tab__list__item__svg" src="/mge/emoji_objects.b46bab92.svg" alt="Emoji Objects"> </a> </li> <li class="tab__list__item"> <a href="/mge/pages/rewiews.html"> <img class="tab__list__item__svg" src="/mge/chat.6da958e5.svg" alt="Chat"> </a> </li> </ul> <a href="/mge/pages/settings.html" id="profileCircle" class="profile-circle"></a> </div> <h1 class="lessons__title">Уроки</h1> <div id="coursesSection">  </div> <script type="module" src="/mge/pages/lessons.a02a6359.js"></script> <script>document.addEventListener("DOMContentLoaded",()=>{let t=window.location.pathname;document.querySelectorAll(".tab__list__item a").forEach(e=>{e.getAttribute("href")===t?e.classList.add("active"):e.classList.remove("active")})});</script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index.f7626f62.css">
+    <title>Document</title>
+    <style>.tab__list__item a {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  transition: background-color .3s, border .3s;
+  display: flex;
+}
+
+.tab__list__item a.active {
+  background-color: #007bff;
+  border: 2px solid #0056b3;
+}
+
+.tab__mainicon {
+  width: 24px;
+}
+</style>
+</head>
+
+<body class="tab__body">
+    <div class="tab">
+        <a href="/index.html"><span class="tab__logo__text">ED</span></a>
+        <a href="/pages/dashboard.html">
+            <img class="tab__mainicon" src="/dashboard.84449c88.svg" alt="">
+        </a>
+        <ul class="tab__list">
+            <li class="tab__list__item">
+                <a href="/pages/courses.html">
+                    <img class="tab__list__item__svg" src="/school.21124949.svg" alt="School">
+                </a>
+            </li>
+            <li class="tab__list__item">
+                <a href="/pages/lessons.html">
+                    <img class="tab__list__item__svg" src="/emoji_objects.076f501b.svg" alt="Emoji Objects">
+                </a>
+            </li>
+            <li class="tab__list__item">
+                <a href="/pages/rewiews.html">
+                    <img class="tab__list__item__svg" src="/chat.8d9b58d9.svg" alt="Chat">
+                </a>
+            </li>
+        </ul>
+        <a href="/pages/settings.html" id="profileCircle" class="profile-circle"></a>
+    </div>
+
+    <h1 class="lessons__title">Уроки</h1>
+
+    <div id="coursesSection">
+        <!-- Sections will be dynamically added here -->
+    </div>
+
+    <script src="/pages/lessons.9cb36834.js" defer=""></script>
+    <script>document.addEventListener("DOMContentLoaded", ()=>{
+    const currentPath = window.location.pathname;
+    const tabLinks = document.querySelectorAll(".tab__list__item a");
+    tabLinks.forEach((link)=>{
+        if (link.getAttribute("href") === currentPath) link.classList.add("active");
+        else link.classList.remove("active");
+    });
+});
+
+</script>
+</body>
+
+</html>
