@@ -88,7 +88,7 @@ header {
 
 .hero {
   flex-direction: column;
-  background-color: #001c27;
+  background-color: rgb(rgb(2, 32, 122));
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -248,12 +248,14 @@ header {
   text-decoration: none;
   line-height: 100px;
 }
+
 .cross__svg {
   opacity: 0.4;
   position: absolute;
-right: 20;
-top: 10;
+  right: 20;
+  top: 10;
 }
+
 .cross__svg:hover {
   opacity: 1;
   animation-duration: 3s;
@@ -263,12 +265,14 @@ top: 10;
 
 .cross__svg2 {
   position: absolute;
-right: 20;
-top: 10;
+  right: 20;
+  top: 10;
 }
+
 .register__title {
   position: relative;
 }
+
 .login__title {
   position: relative;
 
@@ -339,3 +343,4 @@ top: 10;
   justify-content: center;
 }
 
+}
