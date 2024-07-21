@@ -1,95 +1,97 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const lessons = [
-      {
-        id: 1,
-        name: "Вступ до хімії",
-        content: `Цей урок є основою для розуміння хімії як науки. Ми почнемо з визначення хімії та її значення у нашому житті. Хімія вивчає речовини, їхні властивості та перетворення, що відбуваються з ними. Основним об'єктом вивчення хімії є атоми, молекули і реакції, які вони проходять. Розглянемо, що таке атом і молекула, які елементи входять до складу речовин, як вони пов'язані між собою. Особливу увагу приділимо періодичній таблиці хімічних елементів, де зібрані всі відомі елементи та їх властивості. Ознайомимося з основними типами хімічних зв'язків, які визначають структуру і властивості речовин. Ми також розглянемо значення хімії в різних сферах життя: від промисловості до медицини, від біології до екології. Цей урок дозволить закласти міцний фундамент для подальшого вивчення хімії та допоможе зрозуміти її важливість у нашому світі.`
-      },
-      {
-        id: 2,
-        name: "Хімічні реакції",
-        content: `Хімічні реакції - це процеси, під час яких одна або кілька речовин перетворюються на інші. У цьому уроці ми розглянемо різні типи хімічних реакцій, їх механізми та закони. Почнемо з найпростіших реакцій синтезу та розкладання, де з простих речовин утворюються складніші або навпаки. Розглянемо реакції заміщення, де один атом або група атомів замінює інший у молекулі. Обговоримо обмінні реакції, де елементи або групи атомів обмінюються між різними молекулами. Важливим аспектом уроку буде розгляд факторів, що впливають на швидкість реакцій: температура, тиск, концентрація реагентів та каталізатори. Ви дізнаєтеся, як правильно записувати і балансувати хімічні рівняння для відображення кількостей реагентів і продуктів. Розглянемо також приклади хімічних реакцій, які відбуваються у повсякденному житті та в промисловості.`
-      },
-      {
-        id: 3,
-        name: "Стихіометрія",
-        content: `Стихіометрія є важливою частиною хімії, яка дозволяє розраховувати кількість реагентів і продуктів у хімічних реакціях. У цьому уроці ми вивчимо основні принципи стихіометрії, включаючи молярні співвідношення і розрахунки маси і об'єму речовин. Почнемо з того, як використовувати збалансовані хімічні рівняння для визначення кількостей речовин. Дослідимо, як розраховувати молекулярні і масові співвідношення для визначення необхідної кількості реагентів і прогнозування кількості продуктів. Обговоримо, як ці розрахунки використовуються в лабораторних експериментах і промислових процесах. Ви дізнаєтеся, як правильно проводити розрахунки та перевіряти їх точність. Урок надасть основи для розуміння того, як хімічні реакції можуть бути контролювані і оптимізовані для досягнення бажаних результатів.`
-      },
-      {
-        id: 4,
-        name: "Стан речовин",
-        content: `У цьому уроці ми вивчимо різні стани речовин: тверді, рідкі та газоподібні. Розглянемо, як властивості речовин змінюються в залежності від їхнього стану. Почнемо з аналізу властивостей твердих тіл, таких як форма, об'єм і структура кристалів. Дослідимо рідкі речовини, їхню текучість, об'єм і взаємодію з іншими речовинами. Обговоримо властивості газів, включаючи їхню розширюваність, здатність до стискання і зміни об'єму. Розглянемо закони, які описують поведінку газів, такі як закон Бойля-Маріотта і закон Чарльза. Ви дізнаєтеся, як умови температури і тиску впливають на стан речовин і їхню поведінку. Урок дозволить зрозуміти основи термодинаміки і її застосування в хімічних процесах.`
-      },
-      {
-        id: 5,
-        name: "Кислоти та основи",
-        content: `У цьому уроці ми вивчимо властивості кислот і основ, їхні реакції та застосування. Розглянемо концепцію pH, яка використовується для вимірювання кислотності або лужності розчинів. Вивчимо, як кислоти та основи взаємодіють між собою, утворюючи сольові розчини, і які хімічні рівняння описують ці реакції. Обговоримо також, як кислоти та основи використовуються в побуті і промисловості, наприклад, у виготовленні добрив, миючих засобів і харчових продуктів. Особливу увагу буде приділено застосуванню кислот і основ у медицині і біології, таких як їхній вплив на організм людини і роль в біохімічних процесах. Ви дізнаєтеся, як правильно використовувати кислоти та основи в різних ситуаціях і які їхні небезпеки. Урок надасть глибоке розуміння хімічних властивостей цих важливих сполук і їхнього значення для нашого життя.`
-      }
-    ];
+  const lessons = [
+    {
+      id: 1,
+      name: "Вступ до хімії",
+      content: `
+        <h2>Вступ до хімії</h2>
+        <p>Цей урок є основою для розуміння хімії як науки. Ми почнемо з визначення хімії та її значення у нашому житті...</p>
+        <img src="https://via.placeholder.com/800x400?text=%D0%92%D1%81%D1%82%D1%83%D0%BF+%D0%B4%D0%BE+%D1%85%D1%96%D0%BC%D1%96%D1%97" alt="Вступ до хімії" style="width: 100%; height: auto; margin-bottom: 20px;">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/hM-pRag3aqQ?si=hB-HntSzEJeNZ8KJ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      `,
+      youtubeUrl: "https://www.youtube.com/embed/hM-pRag3aqQ?si=hB-HntSzEJeNZ8KJ"
+    },
+    {
+      id: 2,
+      name: "Хімічні реакції",
+      content: `
+        <h2>Хімічні реакції</h2>
+        <p>Хімічні реакції - це процеси, під час яких одна або кілька речовин перетворюються на інші. У цьому уроці ми розглянемо різні типи хімічних реакцій...</p>
+        <img src="https://via.placeholder.com/800x400?text=%D0%A5%D1%96%D0%BC%D1%96%D1%87%D0%BD%D1%96+%D1%80%D0%B5%D0%B0%D0%BA%D1%86%D1%96%D1%97" alt="Хімічні реакції" style="width: 100%; height: auto; margin-bottom: 20px;">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      `,
+      youtubeUrl: "https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_2"
+    },
+    {
+      id: 3,
+      name: "Стихіометрія",
+      content: `
+        <h2>Стихіометрія</h2>
+        <p>Стихіометрія є важливою частиною хімії, яка дозволяє розраховувати кількість реагентів і продуктів у хімічних реакціях...</p>
+        <img src="https://via.placeholder.com/800x400?text=%D0%A1%D1%82%D0%B8%D1%85%D1%96%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D1%96%D1%8F" alt="Стихіометрія" style="width: 100%; height: auto; margin-bottom: 20px;">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      `,
+      youtubeUrl: "https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_3"
+    },
+    {
+      id: 4,
+      name: "Стан речовин",
+      content: `
+        <h2>Стан речовин</h2>
+        <p>У цьому уроці ми вивчимо різні стани речовин: тверді, рідкі та газоподібні...</p>
+        <img src="https://via.placeholder.com/800x400?text=%D0%A1%D1%82%D0%B0%D0%BD+%D1%80%D0%B5%D1%87%D0%BE%D0%B2%D0%B8%D0%BD" alt="Стан речовин" style="width: 100%; height: auto; margin-bottom: 20px;">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      `,
+      youtubeUrl: "https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_4"
+    },
+    {
+      id: 5,
+      name: "Кислоти та основи",
+      content: `
+        <h2>Кислоти та основи</h2>
+        <p>У цьому уроці ми вивчимо властивості кислот і основ, їхні реакції та застосування...</p>
+        <img src="https://via.placeholder.com/800x400?text=%D0%9A%D0%B8%D1%81%D0%BB%D0%BE%D1%82%D0%B8+%D1%82%D0%B0+%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B8" alt="Кислоти та основи" style="width: 100%; height: auto; margin-bottom: 20px;">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      `,
+      youtubeUrl: "https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_5"
+    }
+  ];
 
-    const lessonsContainer = document.getElementById("lessonsContainer");
-    const lessonModal = document.getElementById("lessonModal");
-    const lessonContent = document.getElementById("lessonContent");
-    const completeLessonButton = document.getElementById("completeLessonButton");
+  const lessonsContainer = document.getElementById("lessonsContainer");
+  const lessonModal = document.getElementById("lessonModal");
+  const lessonContent = document.getElementById("lessonContent");
 
-    // Add lesson buttons
-    lessons.forEach(lesson => {
-      const button = document.createElement("button");
-      button.textContent = lesson.name;
-      button.addEventListener("click", () => {
-        lessonContent.innerHTML = `
-          <h2>${lesson.name}</h2>
-          <p>${lesson.content}</p>
-        `;
-        completeLessonButton.setAttribute("data-lesson-id", lesson.id);
-        lessonModal.style.display = "flex";
-      });
-      lessonsContainer.appendChild(button);
+  // Добавляем кнопки для уроков
+  lessons.forEach(lesson => {
+    const button = document.createElement("button");
+    button.textContent = lesson.name;
+    button.className = "lesson-button";
+    button.addEventListener("click", () => {
+      lessonContent.innerHTML = lesson.content;
+      lessonModal.style.display = "flex";
     });
-
-    // Handle lesson completion
-    completeLessonButton.addEventListener("click", () => {
-      const lessonId = completeLessonButton.getAttribute("data-lesson-id");
-      const userProfile = JSON.parse(localStorage.getItem("userProfile"));
-      if (userProfile) {
-        fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${userProfile.id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            ...userProfile,
-            courses: userProfile.courses.map(course =>
-              course.id === parseInt(lessonId) ? { ...course, completed: true } : course
-            )
-          })
-        })
-        .then(response => response.json())
-        .then(() => {
-          lessonModal.style.display = "none";
-        });
-      }
-    });
-
-    // Close modal when clicking outside
-    window.addEventListener("click", (event) => {
-      if (event.target === lessonModal) {
-        lessonModal.style.display = "none";
-      }
-    });
-
-    // Profile circle setup
-    const profileButton = document.querySelector("#profileCircle");
-
-    const updateProfileButton = () => {
-      const userProfile = localStorage.getItem("userProfile");
-      if (userProfile) {
-        const user = JSON.parse(userProfile);
-        profileButton.textContent = user.name[0].toUpperCase();
-      } else {
-        profileButton.style.display = "none";
-      }
-    };
-
-    updateProfileButton();
+    lessonsContainer.appendChild(button);
   });
+
+  // Закрытие модалки при клике за пределами
+  window.addEventListener("click", (event) => {
+    if (event.target === lessonModal) {
+      lessonModal.style.display = "none";
+    }
+  });
+
+  // Обновление иконки профиля
+  const profileButton = document.querySelector("#profileCircle");
+
+  const updateProfileButton = () => {
+    const userProfile = localStorage.getItem("userProfile");
+    if (userProfile) {
+      const user = JSON.parse(userProfile);
+      profileButton.textContent = user.name[0].toUpperCase();
+    } else {
+      profileButton.style.display = "none";
+    }
+  };
+
+  updateProfileButton();
+});
