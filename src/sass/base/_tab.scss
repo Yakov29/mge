@@ -1,6 +1,6 @@
 .tab {
   background-color: #001c27;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -29,7 +29,7 @@
 }
 
 .tab__mainicon {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   margin-top: 50px;
   transition: transform 0.3s ease;
 }

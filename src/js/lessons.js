@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (userProfile) {
             const user = JSON.parse(userProfile);
             profileCircle.textContent = user.name[0].toUpperCase();
+            profileCircle.style.display = "flex";
         } else {
             profileCircle.style.display = "none";
         }
@@ -24,6 +25,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     };
 
     const renderCourseSections = (courses) => {
+        coursesSection.innerHTML = '';
+
         const sections = [
             { name: 'Хімія 101', id: 1 },
             { name: 'Органічна хімія', id: 2 },

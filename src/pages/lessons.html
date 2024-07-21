@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +11,23 @@
     <title>Document</title>
     <style>
         .tab__list__item a {
-            display: inline-block;
-            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px; /* Ensure width and height are the same */
+            height: 40px; /* Ensure width and height are the same */
             border-radius: 50%;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, border 0.3s ease;
+            text-decoration: none; /* Remove underline from links */
         }
 
         .tab__list__item a.active {
             background-color: #007bff;
             border: 2px solid #0056b3;
+        }
+
+        .tab__mainicon {
+            width: 24px; /* Adjust size if needed */
         }
     </style>
 </head>
@@ -71,4 +80,5 @@
         });
     </script>
 </body>
+
 </html>
