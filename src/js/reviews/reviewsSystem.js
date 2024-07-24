@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const reviews = await response.json();
             reviewsContainer.innerHTML = reviews.map(review => `
                 <div class="review">
-                    <div class="review__avatar">${review.name[0].toUpperCase()}</div>
                     <div class="review__content">
                         <p class="review__name">${review.name}</p>
                         <p class="review__text">${review.text}</p>
