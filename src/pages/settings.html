@@ -179,7 +179,7 @@ color: #c82333;
         </a>
       </li>
     </ul>
-    <button id="notificationsButton">Уведомлення</button>
+    <button id="notificationsButton">Повідомлення</button>
   </div>
 
   <div class="profile-settings">
@@ -188,18 +188,23 @@ color: #c82333;
     <form id="settingsForm">
       <label for="name">Ім'я</label>
       <input type="text" id="name" name="name" required />
-
+  
+      <label for="surname">Прізвище</label>
+      <input type="text" id="surname" name="surname" required />
+  
       <label for="password">Пароль</label>
       <input type="password" id="password" name="password" required />
-
+  
       <button type="submit">Зберегти зміни</button>
+      <p style="margin-top: 20px; color: red;">Наразі у нас немає власних серверів, тому профілі користувачів можуть бути не захищеними від можливих загроз. Якщо виникли проблеми, будь ласка, напишіть у повідомленнях в налаштуваннях.</p>
     </form>
   </div>
+  
 
   <div id="notificationsModal" class="modal">
     <div class="modal-content notifications-settings">
       <div class="modal-header">
-        <h2>Уведомлення</h2>
+        <h2>Повідомлення</h2>
         <button id="closeNotificationsModal">&times;</button>
       </div>
       <div class="modal-body">
@@ -207,6 +212,7 @@ color: #c82333;
           <label for="notificationMessage">Повідомлення</label>
           <input type="text" id="notificationMessage" name="notificationMessage" required />
           <button type="submit">Відправити повідомлення</button>
+          <p style="margin-top: 20px; color: red;">Наразі у нас немає власних серверів, тому повідомлення можуть бути не захищеними від можливих загроз.</p>
         </form>
         <div id="notificationsList">
         </div>

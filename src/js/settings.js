@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const users = await response.json();
             const user = users[0];
 
-            // Ensure notifications is an array
             const updatedNotifications = Array.isArray(user.notifications) ? [...user.notifications, message] : [message];
 
             const updateResponse = await fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${user.id}`, {
@@ -171,7 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Перевірка наявності елементів перед додаванням обробників подій
     if (profileButton) {
         profileButton.addEventListener("click", handleProfileModalOpen);
     }
