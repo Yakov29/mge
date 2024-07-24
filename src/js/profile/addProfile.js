@@ -1,5 +1,4 @@
-import { getProfiles } from "./profileSystem";
-import { addProfile } from "./profileSystem";
+import { getProfiles, addProfile } from "./profileSystem";
 
 document.addEventListener("DOMContentLoaded", () => {
     const profileCircle = document.querySelector(".profile__circle");
@@ -38,6 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    const isLoginTaken = async (login) => {
+        try {
+            const profiles = await getProfiles();
+            return profiles.some(profile => profile.login === login);
+        } catch (error) {
+            console.error("Failed to check login availability:", error);
+            return false;
+        }
+    };
+
     updateUI();
 
     if (registerForm) {
@@ -52,6 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!profilename || !profilesurname || !profilelogin || !profilepassword) {
                 if (registerErrorMessage) registerErrorMessage.textContent = 'Please fill in all fields';
+                return;
+            }
+
+            if (await isLoginTaken(profilelogin)) {
+                if (registerErrorMessage) registerErrorMessage.textContent = 'Login is already taken. Please choose another one.';
                 return;
             }
 

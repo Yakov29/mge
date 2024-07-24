@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const users = await response.json();
             const user = users[0];
 
-            const updatedNotifications = [...user.notifications, message];
+            // Ensure notifications is an array
+            const updatedNotifications = Array.isArray(user.notifications) ? [...user.notifications, message] : [message];
 
             const updateResponse = await fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${user.id}`, {
                 method: "PUT",
@@ -104,9 +105,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (!response.ok) throw new Error('Network response was not ok');
                     const users = await response.json();
                     const user = users[0];
-                    
+
                     const updatedNotifications = user.notifications.filter((_, i) => i !== parseInt(index, 10));
-                    
+
                     const updateResponse = await fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${user.id}`, {
                         method: "PUT",
                         headers: {
@@ -118,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         }),
                     });
                     if (!updateResponse.ok) throw new Error('Network response was not ok');
-                    
+
                     await fetchNotifications();
                 } catch (error) {
                     console.error('Deleting notification failed:', error);

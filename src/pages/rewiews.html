@@ -23,7 +23,7 @@
     </style>
 </head>
 
-<body class="tab__body">
+<body class="reviews tab__body">
     <div class="tab">
         <a href="../index.html"><span class="tab__logo__text">ED</span></a>
         <a href="../pages/dashboard.html">
@@ -52,10 +52,11 @@
     <section class="reviews">
         <h1 class="reviews__title">Відгуки</h1>
         <div id="reviews-container"></div>
-        <p class="review-notice">
-            Будь ласка, залишайте адекватні відгуки. Всі неадекватні відгуки будуть видалені.
-        </p>
+        
         <form id="review-form">
+            <p class="review-notice">
+                Увага! При надсиланні відгуку ви більше не зможете їх надсилати!
+            </p>
             <input type="text" id="review-name" placeholder="Ваше ім'я" required>
             <textarea id="review-text" placeholder="Напишіть свій відгук тут..." required></textarea>
             <div id="review-rating" class="rating">

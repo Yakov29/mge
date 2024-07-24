@@ -8,17 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../sass/main.scss">
-    <title>Document</title>
+    <title>Уроки</title>
     <style>
-        .tab__list__item a {
+         .tab__list__item a {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px; /* Ensure width and height are the same */
-            height: 40px; /* Ensure width and height are the same */
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             transition: background-color 0.3s ease, border 0.3s ease;
-            text-decoration: none; /* Remove underline from links */
+            text-decoration: none;
         }
 
         .tab__list__item a.active {
@@ -27,7 +27,37 @@
         }
 
         .tab__mainicon {
-            width: 24px; /* Adjust size if needed */
+            width: 24px;
+        }
+
+        .course-section {
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+
+        .course-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #001C27;
+        }
+
+        .course-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .course-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -36,7 +66,7 @@
     <div class="tab">
         <a href="../index.html"><span class="tab__logo__text">ED</span></a>
         <a href="../pages/dashboard.html">
-            <img class="tab__mainicon" src="../svg/dashboard.svg" alt="">
+            <img class="tab__mainicon" src="../svg/dashboard.svg" alt="Dashboard">
         </a>
         <ul class="tab__list">
             <li class="tab__list__item">
@@ -61,8 +91,25 @@
     <h1 class="lessons__title">Уроки</h1>
 
     <div id="coursesSection">
-        <!-- Sections will be dynamically added here -->
+        
     </div>
+    <div id="coursesSection">
+        <div class="course-section">
+            <h2>Основи Хімії</h2>
+            <p>У цьому курсі ми вивчимо базові принципи хімії, включаючи атомну структуру, хімічні зв'язки та основні реакції. Курс призначений для початківців, які хочуть отримати загальне уявлення про хімічні процеси та речовини.</p>
+        </div>
+    
+        <div class="course-section">
+            <h2>Органічна Хімія</h2>
+            <p>Цей курс охоплює органічну хімію, яка вивчає сполуки вуглецю. Ми розглянемо різні групи органічних сполук, їх властивості, реакції та застосування. Підходить для студентів, які бажають поглибити свої знання в цій області.</p>
+        </div>
+    
+        <div class="course-section">
+            <h2>Аналітична Хімія</h2>
+            <p>Курс аналітичної хімії надає знання про методи аналізу речовин та їх компонентів. Ми вивчимо якісні та кількісні методи аналізу, такі як хроматографія, спектроскопія та інші.</p>
+        </div>
+    </div>
+    
 
     <script type="module" src="../js/lessons.js"></script>
     <script>
