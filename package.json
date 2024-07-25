@@ -5,7 +5,7 @@
   "homepage": "https://yakov29.github.io/mge",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url /mge/",
+    "build": "parcel build src/index.html --public-url /mge",
     "server": "npx json-server reviews.json",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"

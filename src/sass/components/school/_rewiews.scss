@@ -157,3 +157,28 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+.delete-review {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.delete-review:hover {
+    background-color: #cc0000;
+}
+
+.delete-review::before {
+    content: "✖";
+    font-size: 16px;
+}

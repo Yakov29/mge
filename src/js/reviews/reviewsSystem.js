@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const reviewNameInput = document.getElementById("review-name");
     const reviewTextInput = document.getElementById("review-text");
     const reviewRatingContainer = document.getElementById("review-rating");
-    const submitButton = document.getElementById("submit-button");
+    const submitButton = document.querySelector("button[type='submit']");
     const userProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
 
     let selectedRating = 0;
@@ -20,9 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="review__name">${review.name}</p>
                         <p class="review__text">${review.text}</p>
                         <p class="review__rating">Рейтинг: ${"★".repeat(review.rating)}</p>
+                        ${userProfile.admin ? `<button class="delete-review" data-id="${review.id}"></button>` : ''}
                     </div>
                 </div>
             `).join('');
+            if (userProfile.admin) {
+                addDeleteEventListeners();
+            }
         } catch (error) {
             console.error("Failed to fetch reviews:", error);
         }
@@ -38,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify({ name, text, rating })
             });
             if (!response.ok) throw new Error("Network response was not ok");
-            getReviews(); // Refresh the reviews list
+            getReviews();
         } catch (error) {
             console.error("Failed to add review:", error);
         }
@@ -60,6 +64,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const stars = document.querySelectorAll('.star');
         stars.forEach(star => {
             star.classList.toggle('selected', star.dataset.value <= rating);
+        });
+    };
+
+    const addDeleteEventListeners = () => {
+        const deleteButtons = document.querySelectorAll(".delete-review");
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", async () => {
+                const reviewId = button.dataset.id;
+                try {
+                    const response = await fetch(`https://669b6b40276e45187d3569df.mockapi.io/reviews/${reviewId}`, {
+                        method: "DELETE"
+                    });
+                    if (!response.ok) throw new Error("Network response was not ok");
+                    getReviews();
+                } catch (error) {
+                    console.error("Failed to delete review:", error);
+                }
+            });
         });
     };
 
