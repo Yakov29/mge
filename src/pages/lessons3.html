@@ -126,7 +126,7 @@
     <div id="lessonContent">
       <!-- Lesson content will be added here -->
     </div>
-    <button id="completeLessonButton">Завершити урок</button>
+    <!-- <button id="completeLessonButton">Завершити урок</button> -->
   </div>
 
   <script>
@@ -162,7 +162,7 @@
       const lessonsContainer = document.getElementById("lessonsContainer");
       const lessonModal = document.getElementById("lessonModal");
       const lessonContent = document.getElementById("lessonContent");
-      const completeLessonButton = document.getElementById("completeLessonButton");
+      // const completeLessonButton = document.getElementById("completeLessonButton");
 
       // Add lesson buttons
       lessons.forEach(lesson => {
@@ -173,35 +173,35 @@
             <h2>${lesson.name}</h2>
             <p>${lesson.content}</p>
           `;
-          completeLessonButton.setAttribute("data-lesson-id", lesson.id);
+          // completeLessonButton.setAttribute("data-lesson-id", lesson.id);
           lessonModal.style.display = "flex";
         });
         lessonsContainer.appendChild(button);
       });
 
       // Handle lesson completion
-      completeLessonButton.addEventListener("click", () => {
-        const lessonId = completeLessonButton.getAttribute("data-lesson-id");
-        const userProfile = JSON.parse(localStorage.getItem("userProfile"));
-        if (userProfile) {
-          fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${userProfile.id}`, {
-            method: "PUT",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              ...userProfile,
-              courses: userProfile.courses.map(course =>
-                course.id === parseInt(lessonId) ? { ...course, completed: true } : course
-              )
-            })
-          })
-          .then(response => response.json())
-          .then(() => {
-            lessonModal.style.display = "none";
-          });
-        }
-      });
+      // completeLessonButton.addEventListener("click", () => {
+      //   const lessonId = completeLessonButton.getAttribute("data-lesson-id");
+      //   const userProfile = JSON.parse(localStorage.getItem("userProfile"));
+      //   if (userProfile) {
+      //     fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${userProfile.id}`, {
+      //       method: "PUT",
+      //       headers: {
+      //         "Content-Type": "application/json"
+      //       },
+      //       body: JSON.stringify({
+      //         ...userProfile,
+      //         courses: userProfile.courses.map(course =>
+      //           course.id === parseInt(lessonId) ? { ...course, completed: true } : course
+      //         )
+      //       })
+      //     })
+      //     .then(response => response.json())
+      //     .then(() => {
+      //       lessonModal.style.display = "none";
+      //     });
+      //   }
+      // });
 
       // Close modal when clicking outside
       window.addEventListener("click", (event) => {
