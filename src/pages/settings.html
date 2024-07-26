@@ -5,156 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../sass/main.scss" />
   <title>Налаштування акаунта</title>
-  <style>
-    .profile-settings, .notifications-settings {
-      max-width: 600px;
-      padding: 20px;
-      border-radius: 8px;
-      background-color: #ffffff;
-      position: relative;
-    }
-
-    .profile-settings h1, .notifications-settings h1 {
-      margin: 0;
-      font-size: 26px;
-      color: #002d3a;
-    }
-
-    .profile-settings .profile-name, .notifications-settings .profile-name {
-      font-size: 20px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .profile-settings label, .notifications-settings label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .profile-settings input, .notifications-settings input {
-      width: calc(100% - 16px);
-      padding: 12px;
-      margin-bottom: 16px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-
-    .profile-settings button, .notifications-settings button {
-      padding: 12px 24px;
-      border: none;
-      border-radius: 4px;
-      background-color: #002d3a;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .profile-settings button:hover, .notifications-settings button:hover {
-      background-color: #0056b3;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      width: 90%;
-      max-width: 600px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow-y: auto;
-    }
-
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .modal-header h2 {
-      margin: 0;
-      font-size: 24px;
-      color: #002d3a;
-    }
-
-    .modal-header button {
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: #007bff;
-      cursor: pointer;
-    }
-
-    .modal-header button:hover {
-      color: #0056b3;
-    }
-
-    .modal-body {
-      margin-top: 20px;
-    }
-
-    #notificationsButton {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 12px 24px;
-      background-color: #002d3a;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 18px;
-      transition: background-color 0.3s;
-    }
-
-    #notificationsButton:hover {
-      background-color: #0056b3;
-    }
-
-    .notification-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px;
-      border-bottom: 1px solid #ddd;
-      background-color: #f9f9f9;
-    }
-
-    .notification-item p {
-      margin: 0;
-      font-size: 16px;
-    }
-
-    .notification-item button {
-      background: none;
-      border: none;
-      color: red;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .notification-item button:hover {
-      color: darkred;
-    }
-
-    .settingsTitle{
-color: #c82333;
-}
-  </style>
 </head>
 <body class="tab__body">
   <div class="tab">
@@ -179,7 +29,7 @@ color: #c82333;
         </a>
       </li>
     </ul>
-    <button id="notificationsButton">Уведомлення</button>
+    <button id="notificationsButton">Повідомлення</button>
   </div>
 
   <div class="profile-settings">
@@ -188,18 +38,23 @@ color: #c82333;
     <form id="settingsForm">
       <label for="name">Ім'я</label>
       <input type="text" id="name" name="name" required />
-
+  
+      <label for="surname">Прізвище</label>
+      <input type="text" id="surname" name="surname" required />
+  
       <label for="password">Пароль</label>
       <input type="password" id="password" name="password" required />
-
+  
       <button type="submit">Зберегти зміни</button>
+      <p style="margin-top: 20px; color: red;">Наразі у нас немає власних серверів, тому профілі користувачів можуть бути не захищеними від можливих загроз. Якщо виникли проблеми, будь ласка, напишіть у повідомленнях в налаштуваннях.</p>
     </form>
   </div>
+  
 
   <div id="notificationsModal" class="modal">
     <div class="modal-content notifications-settings">
       <div class="modal-header">
-        <h2>Уведомлення</h2>
+        <h2>Повідомлення</h2>
         <button id="closeNotificationsModal">&times;</button>
       </div>
       <div class="modal-body">
@@ -207,6 +62,7 @@ color: #c82333;
           <label for="notificationMessage">Повідомлення</label>
           <input type="text" id="notificationMessage" name="notificationMessage" required />
           <button type="submit">Відправити повідомлення</button>
+          <p style="margin-top: 20px; color: red;">Наразі у нас немає власних серверів, тому повідомлення можуть бути не захищеними від можливих загроз.</p>
         </form>
         <div id="notificationsList">
         </div>

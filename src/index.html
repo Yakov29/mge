@@ -86,6 +86,17 @@
             <button type="submit" class="login__more">Зайти</button>
         </form>
     </div>
+    <div id="adminRequestModal" class="admin-request-modal change__invisible">
+        <form class="admin-request-form">
+            <img class="cross__svg" width="40px" height="40px" src="./svg/cross.svg" alt="Закрити">
+            <h1 class="admin-request-title">Запит на адміністратора</h1>
+            <p id="userName"></p>
+            <input id="adminConfirmation" placeholder="Напишіть 'так', щоб стати адміністратором" class="admin-confirmation-input">
+            <button type="button" id="submitAdminRequest" class="submit-admin-request-button">Подати запит</button>
+        </form>
+    </div>
+    
+
     <script src="./index.js" type="module"></script>
 </body>
 

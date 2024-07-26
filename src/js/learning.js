@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const lessonModal = document.getElementById("lessonModal");
   const lessonContent = document.getElementById("lessonContent");
 
-  // Добавляем кнопки для уроков
   lessons.forEach(lesson => {
     const button = document.createElement("button");
     button.textContent = lesson.name;

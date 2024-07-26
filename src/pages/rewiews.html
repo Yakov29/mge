@@ -20,10 +20,23 @@
             background-color: #007bff;
             border: 2px solid #0056b3;
         }
+
+        .delete-review {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .delete-review:hover {
+            background-color: #cc0000;
+        }
     </style>
 </head>
 
-<body class="tab__body">
+<body class="reviews tab__body">
     <div class="tab">
         <a href="../index.html"><span class="tab__logo__text">ED</span></a>
         <a href="../pages/dashboard.html">
@@ -46,16 +59,17 @@
                 </a>
             </li>
         </ul>
-        <a href="../pages/settings.html" id="profileCircle" class="profile-circle"></a>
+        <a href="./settings.html" id="profileCircle" class="profile-circle"></a>
     </div>
 
     <section class="reviews">
         <h1 class="reviews__title">Відгуки</h1>
         <div id="reviews-container"></div>
-        <p class="review-notice">
-            Будь ласка, залишайте адекватні відгуки. Всі неадекватні відгуки будуть видалені.
-        </p>
+        
         <form id="review-form">
+            <p class="review-notice">
+                Увага! При надсиланні відгуку ви більше не зможете їх надсилати!
+            </p>
             <input type="text" id="review-name" placeholder="Ваше ім'я" required>
             <textarea id="review-text" placeholder="Напишіть свій відгук тут..." required></textarea>
             <div id="review-rating" class="rating">
