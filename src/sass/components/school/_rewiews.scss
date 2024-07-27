@@ -1,4 +1,4 @@
-.reviews{
+.reviews {
     padding-bottom: 150px;
 }
 
@@ -16,7 +16,7 @@
 #review-form {
     position: fixed;
     bottom: 0;
-    left: 174px;
+    left: 0;
     width: 100%;
     background-color: #f9f9f9;
     padding: 20px;
@@ -181,4 +181,92 @@
 .delete-review::before {
     content: "✖";
     font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .reviews__title {
+        font-size: 36px;
+    }
+
+    #review-form {
+        left: 0;
+        padding: 15px;
+        margin-left: 144px;
+    }
+
+    #review-form input,
+    #review-form textarea {
+        width: calc(100% - 20px);
+    }
+
+    #review-form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .review {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review__name {
+        font-size: 14px;
+    }
+
+    .review__text {
+        font-size: 14px;
+    }
+
+    .review__rating {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews__title {
+        font-size: 28px;
+    }
+
+    #review-form input,
+    #review-form textarea {
+        width: calc(100% - 10px);
+        font-size: 14px;
+    }
+
+    #review-form button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .review {
+        padding: 10px;
+    }
+
+    .review__name {
+        font-size: 12px;
+    }
+
+    .review__text {
+        font-size: 12px;
+    }
+
+    .review__rating {
+        font-size: 10px;
+    }
+
+    .profile-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .delete-review {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .delete-review::before {
+        font-size: 14px;
+    }
 }

@@ -1,46 +1,111 @@
+body {
+  font-family: 'Roboto';
+}
+
+.container {
+  width: 1200px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.change__invisible {
+  display: none;
+}
+
+.tab__list__item a.active img {
+  border: 2px solid #007bff;
+}
+
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+input, textarea, select {
+  outline: none;
+}
+
+optgroup, option {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+
+@media (max-width: 767px) {
+  .container {
+      width: 100%;
+      padding: 0 15px;
   }
-  a {
-    text-decoration: none;
+
+  h1 {
+      font-size: 24px;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 0;
-    margin-bottom: 0;
+
+  h2 {
+      font-size: 20px;
   }
+
   p {
-    margin: 0;
+      font-size: 14px;
   }
+
   img {
-    display: block;
-    // width: 100%;
-  
+      max-width: 100%;
+      height: auto;
   }
-  input {
-    outline: none;
+}
+
+/* Таблеты */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+      width: 90%;
+      padding: 0 20px;
   }
-  textarea {
-    outline: none;
+
+  h1 {
+      font-size: 28px;
   }
-  select {
-    outline: none;
+
+  h2 {
+      font-size: 24px;
   }
-  optgroup {
-    margin: 0;
-    padding: 0;
+
+  p {
+      font-size: 16px;
   }
-  option {
-    margin: 0;
-    padding: 0;
+
+  img {
+      max-width: 100%;
+      height: auto;
   }
-  
-  button{
-    border: none;
+}
+
+@media (min-width: 992px) {
+  .container {
+      width: 1200px;
   }
+}
