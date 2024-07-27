@@ -1,51 +1,90 @@
 .lessons__chapter-title {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 40px;
-    transition: color 0.3s ease;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  transition: color 0.3s ease;
+}
+
+.lessons__chapter-title:hover {
+  color: #1fd0e0;
+}
+
+.lessons__chapter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.lessons__lesson {
+  width: 250px;
+  height: 50px;
+  background-color: #001C27;
+  color: white;
+  font-size: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border-left: #2D9CDB 5px solid;
+  transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+.lessons__lesson:hover {
+  background-color: #002233;
+  border-left: #1fd0e0 5px solid;
+}
+
+.lessons__lesson-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lessons__lesson:hover .lessons__lesson-link {
+  background-color: #2D9CDB;
+  color: #001c27;
+}
+
+@media (max-width: 768px) {
+  .lessons__chapter-title {
+      font-size: 30px;
   }
-  
-  .lessons__chapter-title:hover {
-    color: #1fd0e0; /* Change color on hover */
-  }
-  
+
   .lessons__chapter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+      flex-direction: column;
+      gap: 20px;
   }
-  
+
   .lessons__lesson {
-    width: 250px;
-    height: 50px;
-    background-color: #001C27;
-    color: white;
-    font-size: 32px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    border-left: #2D9CDB 5px solid;
-    transition: background-color 0.3s ease, border-left 0.3s ease;
+      width: 100%;
+      height: auto;
+      font-size: 24px;
+      padding: 10px;
+      box-sizing: border-box;
   }
-  
-  .lessons__lesson:hover {
-    background-color: #002233; /* Slightly lighter shade for hover effect */
-    border-left: #1fd0e0 5px solid; /* Change border color on hover */
-  }
-  
+
   .lessons__lesson-link {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 18px;
+      padding: 8px 16px;
   }
-  
-  .lessons__lesson:hover {
-    background-color: #2D9CDB; /* Change background color on hover */
-    color: #001c27; /* Change text color on hover */
+}
+
+@media (max-width: 480px) {
+  .lessons__chapter-title {
+      font-size: 24px;
   }
-  
+
+  .lessons__lesson {
+      font-size: 20px;
+      padding: 8px;
+  }
+
+  .lessons__lesson-link {
+      font-size: 16px;
+      padding: 6px 12px;
+  }
+}

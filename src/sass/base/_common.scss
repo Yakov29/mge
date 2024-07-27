@@ -1,8 +1,8 @@
-body{
-    font-family: 'Roboto';
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-.container{
+.container {
     width: 1200px;
     display: flex;
     margin-left: auto;
@@ -10,11 +10,29 @@ body{
     align-items: center;
 }
 
-.change__invisible{
+/* Hide elements with the class `change__invisible` */
+.change__invisible {
     display: none;
 }
 
+/* Highlight active tab with a border */
 .tab__list__item a.active img {
-  border: 2px solid #007bff; /* Highlight color for active tab */
+    border: 2px solid #007bff; /* Highlight color for active tab */
 }
 
+/* Media Queries */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}

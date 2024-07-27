@@ -39,7 +39,6 @@ header {
   margin-left: 0;
 }
 
-
 .account__choose {
   display: flex;
   align-items: center;
@@ -79,7 +78,7 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #2D9CDB;
+  background-color: #2d9cdb;
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -127,6 +126,8 @@ header {
   outline: 5px solid white;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .footer__logo {
@@ -192,6 +193,8 @@ header {
   border-radius: 8px;
   z-index: 1000;
   text-align: center;
+  width: 90%;
+  max-width: 500px;
 }
 
 .change__invisible {
@@ -238,7 +241,7 @@ header {
 
 .cabinetLink {
   display: none;
-  background-color: #2D9CDB;
+  background-color: #2d9cdb;
   color: #fff;
   width: 370px;
   height: 100px;
@@ -252,30 +255,28 @@ header {
 .cross__svg {
   opacity: 0.4;
   position: absolute;
-  right: 20;
-  top: 10;
+  right: 20px;
+  top: 10px;
 }
 
 .cross__svg:hover {
   opacity: 1;
   animation-duration: 3s;
   transform: rotateZ(70deg);
-
 }
 
 .cross__svg2 {
   position: absolute;
-  right: 20;
-  top: 10;
+  right: 20px;
+  top: 10px;
 }
 
-.register__title {
+.register__title,
+.login__title {
   position: relative;
 }
 
 .login__title {
-  position: relative;
-
   font-weight: 400;
   font-size: 96px;
   text-align: center;
@@ -329,20 +330,18 @@ header {
   background-color: #c82333;
 }
 
-
-.board__button{
+.board__button {
   padding: 10px;
   border-radius: 10px;
   font-weight: 400;
   font-size: 18px;
   text-align: center;
-  background-color: #2D9CDB;
+  background-color: #2d9cdb;
   color: white;
   margin-left: 20px;
   display: flex;
   justify-content: center;
 }
-
 
 .admin-request-modal {
   position: fixed;
@@ -398,19 +397,273 @@ header {
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.submit-admin-request-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  cursor: pointer;
+  border-radius: 5px;
   font-size: 16px;
 }
 
-.submit-admin-request-button:hover {
-  background-color: #0056b3;
+.admin-request-button {
+  background-color: #2d9cdb;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.admin-request-button:hover {
+  background-color: #1e7cbf;
+}
+
+@media (max-width: 768px) {
+  .profile-header{
+    display: none;
+  }
+  .profile-header {
+    margin-left: auto;
+    align-items: center;
+    display: flex;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
+  }
+
+  .header__logo {
+    font-size: 40px;
+  }
+
+  .nav {
+    margin: 0;
+    margin-left: 10px;
+    padding: 10px 0;
+    display: block;
+    flex-direction: column;
+  }
+
+  .nav__item {
+    margin: 5px 0;
+    font-size: 24px;
+  }
+
+  .account__choose {
+    margin: 10px 0;
+  }
+
+  .main__account__btn {
+    width: 100%;
+  }
+
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .first__title {
+    font-size: 48px;
+    margin-bottom: 100px;
+    width: 100%;
+  }
+
+  .second__title {
+    font-size: 48px;
+  }
+
+  .try__btn {
+    width: 100%;
+    font-size: 36px;
+  }
+
+  .footer {
+    padding: 30px 10px;
+  }
+
+  .footer__logo {
+    font-size: 40px;
+  }
+
+  .address__item {
+    margin-bottom: 5px;
+  }
+
+  .address__link {
+    font-size: 16px;
+  }
+
+  .work__title {
+    font-size: 18px;
+  }
+
+  .work__send__btn {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .work__description {
+    font-size: 14px;
+  }
+
+  .register__modal,
+  .login__modal {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .register__input__box,
+  .login__input__box {
+    width: 100%;
+  }
+
+  .register__social,
+  .login__social {
+    width: 100%;
+  }
+
+  .register__more,
+  .login__more {
+    width: 100%;
+  }
+
+  .login__title {
+    font-size: 72px;
+  }
+
+  .login__inputs {
+    flex-direction: column;
+  }
+
+  .login__input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .login__button {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .logout__button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .board__button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .admin-request-modal {
+    padding: 20px;
+  }
+
+  .admin-request-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__logo {
+    font-size: 30px;
+  }
+
+  .nav__item {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .first__title {
+    font-size: 36px;
+    margin-bottom: 80px;
+  }
+
+  .second__title {
+    font-size: 36px;
+  }
+
+  .try__btn {
+    font-size: 28px;
+  }
+
+  .footer__logo {
+    font-size: 30px;
+  }
+
+  .address__link {
+    font-size: 14px;
+  }
+
+  .work__title {
+    font-size: 16px;
+  }
+
+  .work__send__btn {
+    font-size: 12px;
+  }
+
+  .work__description {
+    font-size: 12px;
+  }
+
+  .register__modal,
+  .login__modal {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .register__input__box,
+  .login__input__box {
+    width: 100%;
+  }
+
+  .register__social,
+  .login__social {
+    width: 100%;
+  }
+
+  .register__more,
+  .login__more {
+    width: 100%;
+  }
+
+  .login__title {
+    font-size: 48px;
+  }
+
+  .login__inputs {
+    flex-direction: column;
+  }
+
+  .login__input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .login__button {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .logout__button {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .board__button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .admin-request-modal {
+    padding: 10px;
+  }
+
+  .admin-request-form {
+    width: 100%;
+  }
 }

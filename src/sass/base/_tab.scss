@@ -73,7 +73,7 @@
 }
 
 .settings__menu:hover {
-  background-color: #002233; /* Slightly lighter shade for hover effect */
+  background-color: #002233;
 }
 
 .settings__menu {
@@ -84,8 +84,18 @@
 .tab__body {
   padding-left: 200px;
   padding-bottom: 100px;
+  padding-right: 10px;
 }
 
 .tab__list__item a.active img {
-  border: 2px solid #007bff; /* Highlight color for active tab */
+  border: 2px solid #007bff;
+}
+
+@media (max-width: 768px) {
+  .tab__body {
+    padding-left: 150px;
+  }
+  .tab{
+    width: 40px;
+  }
 }
