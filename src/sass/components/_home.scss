@@ -25,6 +25,10 @@ header {
 
 .nav {
   margin-left: 122px;
+  width: 200px;
+    @media (max-width: 1440px) {
+      width: 800px;
+  }
 }
 
 .nav__item {
@@ -36,7 +40,7 @@ header {
 }
 
 .nav__item:first-child {
-  margin-left: 0;
+  // margin-left: 0;
 }
 
 .account__choose {
@@ -156,6 +160,10 @@ header {
 .work__send {
   display: block;
   margin-left: auto;
+//   @media (max-width: 768px) {
+// margin-left: auto;
+//   }
+
 }
 
 .work__title {
@@ -436,8 +444,7 @@ header {
   }
 
   .nav {
-    margin: 0;
-    margin-left: 10px;
+    width: 200px;
     padding: 10px 0;
     display: block;
     flex-direction: column;
@@ -550,6 +557,7 @@ header {
   }
 
   .board__button {
+    margin-left: 70px;
     width: 100%;
     font-size: 16px;
   }
