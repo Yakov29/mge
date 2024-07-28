@@ -26,9 +26,7 @@ header {
 .nav {
   margin-left: 122px;
   width: 200px;
-    @media (min-width: 768px) {
-      width: 800px;
-  }
+  display: flex;
 }
 
 .nav__item {
@@ -37,10 +35,6 @@ header {
   color: white;
   font-weight: 400;
   text-decoration: none;
-}
-
-.nav__item:first-child {
-  // margin-left: 0;
 }
 
 .account__choose {
@@ -106,6 +100,8 @@ header {
 
 .hero .container {
   display: block;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .second__title {
@@ -161,10 +157,6 @@ header {
 .work__send {
   display: block;
   margin-left: auto;
-//   @media (max-width: 768px) {
-// margin-left: auto;
-//   }
-
 }
 
 .work__title {
@@ -401,278 +393,66 @@ header {
   margin-bottom: 20px;
 }
 
-.admin-confirmation-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.change-user-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   font-size: 16px;
 }
 
-.admin-request-button {
-  background-color: #2d9cdb;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.admin-request-button:hover {
-  background-color: #1e7cbf;
+.change-user-button:hover {
+  background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
-  .profile-header{
-    display: none;
-  }
-  .profile-header {
-    margin-left: auto;
-    align-items: center;
-    display: flex;
-  }
-  header {
+  .nav {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
-    height: auto;
-  }
-
-  .header__logo {
-    font-size: 40px;
-  }
-
-  .nav {
-    width: 200px;
-    padding: 10px 0;
-    display: block;
-    flex-direction: column;
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    display: none;
   }
 
   .nav__item {
-    margin: 5px 0;
+    margin-left: 0;
+    margin-bottom: 10px;
     font-size: 24px;
-  }
+    display: none;
 
-  .account__choose {
-    margin: 10px 0;
-  }
-
-  .main__account__btn {
-    width: 100%;
-  }
-
-  .hero {
-    padding-top: 80px;
-    padding-bottom: 80px;
   }
 
   .first__title {
-    font-size: 48px;
-    margin-bottom: 100px;
     width: 100%;
+    font-size: 48px;
   }
 
-  .second__title {
-    font-size: 48px;
+  .hero .container {
+    padding: 0 10px;
   }
 
   .try__btn {
-    width: 100%;
-    font-size: 36px;
-  }
-
-  .footer {
-    padding: 30px 10px;
-  }
-
-  .footer__logo {
-    font-size: 40px;
-  }
-
-  .address__item {
-    margin-bottom: 5px;
-  }
-
-  .address__link {
-    font-size: 16px;
-  }
-
-  .work__title {
-    font-size: 18px;
-  }
-
-  .work__send__btn {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .work__description {
-    font-size: 14px;
-  }
-
-  .register__modal,
-  .login__modal {
     width: 90%;
-    padding: 15px;
-  }
-
-  .register__input__box,
-  .login__input__box {
-    width: 100%;
-  }
-
-  .register__social,
-  .login__social {
-    width: 100%;
-  }
-
-  .register__more,
-  .login__more {
-    width: 100%;
-  }
-
-  .login__title {
-    font-size: 72px;
-  }
-
-  .login__inputs {
-    flex-direction: column;
-  }
-
-  .login__input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .login__button {
-    width: 100%;
-    margin-top: 30px;
-  }
-
-  .logout__button {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .board__button {
-    margin-left: 70px;
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .admin-request-modal {
-    padding: 20px;
-  }
-
-  .admin-request-form {
-    width: 100%;
+    height: 80px;
+    font-size: 36px;
   }
 }
 
 @media (max-width: 480px) {
-  .header__logo {
-    font-size: 30px;
-  }
-
   .nav__item {
     font-size: 20px;
   }
 
-  .hero {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
   .first__title {
-    font-size: 36px;
-    margin-bottom: 80px;
-  }
-
-  .second__title {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .try__btn {
+    width: 80%;
+    height: 60px;
     font-size: 28px;
-  }
-
-  .footer__logo {
-    font-size: 30px;
-  }
-
-  .address__link {
-    font-size: 14px;
-  }
-
-  .work__title {
-    font-size: 16px;
-  }
-
-  .work__send__btn {
-    font-size: 12px;
-  }
-
-  .work__description {
-    font-size: 12px;
-  }
-
-  .register__modal,
-  .login__modal {
-    width: 90%;
-    padding: 10px;
-  }
-
-  .register__input__box,
-  .login__input__box {
-    width: 100%;
-  }
-
-  .register__social,
-  .login__social {
-    width: 100%;
-  }
-
-  .register__more,
-  .login__more {
-    width: 100%;
-  }
-
-  .login__title {
-    font-size: 48px;
-  }
-
-  .login__inputs {
-    flex-direction: column;
-  }
-
-  .login__input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .login__button {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .logout__button {
-    width: 100%;
-    font-size: 12px;
-  }
-
-  .board__button {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .admin-request-modal {
-    padding: 10px;
-  }
-
-  .admin-request-form {
-    width: 100%;
   }
 }
