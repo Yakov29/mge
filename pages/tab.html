@@ -1,1 +1,55 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><link rel="stylesheet" href="/mge/index.4b55be80.css"><title>Document</title></head><body class="tab__body"> <div class="tab"> <a href="/mge/index.html"><span class="tab__logo__text">ED</span></a> <a href="/mge/pages/dashboard.html"> <img class="tab__mainicon" src="/mge/dashboard.c1601abe.svg" alt> </a> <ul class="tab__list"> <li class="tab__list__item"> <a href="/mge/pages/courses.html"> <img class="tab__list__item__svg" src="/mge/school.185c1a10.svg" alt="School"> </a> </li> <li class="tab__list__item"> <a href="/mge/pages/lessons.html"> <img class="tab__list__item__svg" src="/mge/emoji_objects.b46bab92.svg" alt="Emoji Objects"> </a> </li> <li class="tab__list__item"> <a href="/mge/pages/rewiews.html"> <img class="tab__list__item__svg" src="/mge/chat.6da958e5.svg" alt="Chat"> </a> </li> </ul> <a href="/mge/pages/settings.html" id="profileCircle" class="profile-circle"></a> </div> <script>document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector("#profileCircle");(()=>{let t=localStorage.getItem("userProfile");if(t){let l=JSON.parse(t);e.textContent=l.name[0].toUpperCase()}else e.style.display="none"})()});</script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/index.f7626f62.css">
+  <title>Document</title>
+</head>
+
+<body class="tab__body">
+  <div class="tab">
+    <a href="/index.html"><span class="tab__logo__text">ED</span></a>
+    <a href="/pages/dashboard.html">
+      <img class="tab__mainicon" src="/dashboard.84449c88.svg" alt="">
+    </a>
+    <ul class="tab__list">
+      <li class="tab__list__item">
+        <a href="/pages/courses.html">
+          <img class="tab__list__item__svg" src="/school.21124949.svg" alt="School">
+        </a>
+      </li>
+      <li class="tab__list__item">
+        <a href="/pages/lessons.html">
+          <img class="tab__list__item__svg" src="/emoji_objects.076f501b.svg" alt="Emoji Objects">
+        </a>
+      </li>
+      <li class="tab__list__item">
+        <a href="/pages/rewiews.html">
+          <img class="tab__list__item__svg" src="/chat.8d9b58d9.svg" alt="Chat">
+        </a>
+      </li>
+    </ul>
+    <a href="/pages/settings.html" id="profileCircle" class="profile-circle"></a>
+  </div>
+  
+  <script>document.addEventListener("DOMContentLoaded", ()=>{
+    const profileButton = document.querySelector("#profileCircle");
+    const updateProfileButton = ()=>{
+        const userProfile = localStorage.getItem("userProfile");
+        if (userProfile) {
+            const user = JSON.parse(userProfile);
+            profileButton.textContent = user.name[0].toUpperCase();
+        } else profileButton.style.display = "none";
+    };
+    updateProfileButton();
+});
+
+</script>
+<script src="/tab.c6f26226.js"></script></body>
+
+</html>
