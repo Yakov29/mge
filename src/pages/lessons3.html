@@ -180,30 +180,6 @@
         lessonsContainer.appendChild(button);
       });
 
-      // Handle lesson completion
-      // completeLessonButton.addEventListener("click", () => {
-      //   const lessonId = completeLessonButton.getAttribute("data-lesson-id");
-      //   const userProfile = JSON.parse(localStorage.getItem("userProfile"));
-      //   if (userProfile) {
-      //     fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${userProfile.id}`, {
-      //       method: "PUT",
-      //       headers: {
-      //         "Content-Type": "application/json"
-      //       },
-      //       body: JSON.stringify({
-      //         ...userProfile,
-      //         courses: userProfile.courses.map(course =>
-      //           course.id === parseInt(lessonId) ? { ...course, completed: true } : course
-      //         )
-      //       })
-      //     })
-      //     .then(response => response.json())
-      //     .then(() => {
-      //       lessonModal.style.display = "none";
-      //     });
-      //   }
-      // });
-
       // Close modal when clicking outside
       window.addEventListener("click", (event) => {
         if (event.target === lessonModal) {
@@ -227,7 +203,6 @@
       updateProfileButton();
     });
   </script>
-  <script src="../js/learning3.js"></script>
 
 </body>
 

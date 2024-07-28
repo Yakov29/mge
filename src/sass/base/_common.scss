@@ -20,19 +20,3 @@ body {
     border: 2px solid #007bff; /* Highlight color for active tab */
 }
 
-/* Media Queries */
-
-/* For tablets and smaller screens */
-@media (max-width: 1024px) {
-    .container {
-        width: 90%;
-    }
-}
-
-/* For mobile phones */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 10px;
-    }
-}
