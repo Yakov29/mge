@@ -1,131 +1,4 @@
-<!DOCTYPE html>
-<html lang="uk">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/index.f7626f62.css">
-  <title>Аналітична хімія</title>
-  <style>#lessonsContainer {
-  flex-direction: column;
-  gap: 15px;
-  padding: 20px;
-  display: flex;
-}
-
-#lessonsContainer button {
-  color: #fff;
-  cursor: pointer;
-  background-color: #001c27;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 25px;
-  font-size: 18px;
-  transition: background-color .2s, box-shadow .2s;
-  box-shadow: 0 4px 8px #0003;
-}
-
-#lessonsContainer button:hover {
-  background-color: #003045;
-}
-
-#lessonModal {
-  background: #000000b3;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-#lessonContent {
-  background: #fff;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 700px;
-  max-height: 80vh;
-  padding: 30px;
-  overflow-y: auto;
-  box-shadow: 0 4px 12px #0003;
-}
-
-#completeLessonButton {
-  color: #fff;
-  cursor: pointer;
-  background-color: #001c27;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
-  padding: 12px 25px;
-  transition: background-color .2s, box-shadow .2s;
-  box-shadow: 0 4px 8px #0003;
-}
-
-#completeLessonButton:hover {
-  background-color: #003045;
-}
-
-.profile-circle {
-  color: #fff;
-  background-color: #007bff;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
-  text-decoration: none;
-  display: inline-flex;
-}
-</style>
-</head>
-
-<body class="tab__body">
-  <div class="tab">
-    <a href="/index.html"><span class="tab__logo__text">ED</span></a>
-    <a href="/pages/dashboard.html">
-      <img class="tab__mainicon" src="/dashboard.84449c88.svg" alt="">
-    </a>
-    <ul class="tab__list">
-      <li class="tab__list__item">
-        <a href="/pages/courses.html">
-          <img class="tab__list__item__svg" src="/school.21124949.svg" alt="School">
-        </a>
-      </li>
-      <li class="tab__list__item">
-        <a href="/pages/lessons.html">
-          <img class="tab__list__item__svg" src="/emoji_objects.076f501b.svg" alt="Emoji Objects">
-        </a>
-      </li>
-      <li class="tab__list__item">
-        <a href="/pages/rewiews.html">
-          <img class="tab__list__item__svg" src="/chat.8d9b58d9.svg" alt="Chat">
-        </a>
-      </li>
-    </ul>
-    <a href="/pages/settings.html" id="profileCircle" class="profile-circle"></a>
-  </div>
-
-  <div id="lessonsContainer">
-    <!-- Buttons for lessons will be added here by JavaScript -->
-  </div>
-
-  <!-- Lesson Modal -->
-  <div id="lessonModal">
-    <div id="lessonContent">
-      <!-- Lesson content will be added here -->
-    </div>
-    <!-- <button id="completeLessonButton">Завершити урок</button> -->
-  </div>
-
-
-  <script>document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", ()=>{
     const lessons = [
         {
             id: 1,
@@ -156,44 +29,41 @@
     const lessonsContainer = document.getElementById("lessonsContainer");
     const lessonModal = document.getElementById("lessonModal");
     const lessonContent = document.getElementById("lessonContent");
-    // const completeLessonButton = document.getElementById("completeLessonButton");
+    const completeLessonButton = document.getElementById("completeLessonButton");
     // Add lesson buttons
     lessons.forEach((lesson)=>{
         const button = document.createElement("button");
         button.textContent = lesson.name;
         button.addEventListener("click", ()=>{
             lessonContent.innerHTML = `
-            <h2>${lesson.name}</h2>
-            <p>${lesson.content}</p>
-          `;
-            // completeLessonButton.setAttribute("data-lesson-id", lesson.id);
+          <h2>${lesson.name}</h2>
+          <p>${lesson.content}</p>
+        `;
+            completeLessonButton.setAttribute("data-lesson-id", lesson.id);
             lessonModal.style.display = "flex";
         });
         lessonsContainer.appendChild(button);
     });
     // Handle lesson completion
-    // completeLessonButton.addEventListener("click", () => {
-    //   const lessonId = completeLessonButton.getAttribute("data-lesson-id");
-    //   const userProfile = JSON.parse(localStorage.getItem("userProfile"));
-    //   if (userProfile) {
-    //     fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${userProfile.id}`, {
-    //       method: "PUT",
-    //       headers: {
-    //         "Content-Type": "application/json"
-    //       },
-    //       body: JSON.stringify({
-    //         ...userProfile,
-    //         courses: userProfile.courses.map(course =>
-    //           course.id === parseInt(lessonId) ? { ...course, completed: true } : course
-    //         )
-    //       })
-    //     })
-    //     .then(response => response.json())
-    //     .then(() => {
-    //       lessonModal.style.display = "none";
-    //     });
-    //   }
-    // });
+    completeLessonButton.addEventListener("click", ()=>{
+        const lessonId = completeLessonButton.getAttribute("data-lesson-id");
+        const userProfile = JSON.parse(localStorage.getItem("userProfile"));
+        if (userProfile) fetch(`https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/${userProfile.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                ...userProfile,
+                courses: userProfile.courses.map((course)=>course.id === parseInt(lessonId) ? {
+                        ...course,
+                        completed: true
+                    } : course)
+            })
+        }).then((response)=>response.json()).then(()=>{
+            lessonModal.style.display = "none";
+        });
+    });
     // Close modal when clicking outside
     window.addEventListener("click", (event)=>{
         if (event.target === lessonModal) lessonModal.style.display = "none";
@@ -210,9 +80,4 @@
     updateProfileButton();
 });
 
-</script>
-  <script src="/pages/lessons3.cc18a7f9.js"></script>
-
-<script src="/lessons3.3d0cabe1.js"></script></body>
-
-</html>
+//# sourceMappingURL=lessons3.cc18a7f9.js.map
