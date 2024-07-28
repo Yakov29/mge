@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const registerModal = document.querySelector(".register__modal");
     const loginModal = document.querySelector(".login__modal");
     const tryButton = document.querySelector(".tryButton");
-
     const updateUI = () => {
         const userProfile = localStorage.getItem("userProfile");
 
