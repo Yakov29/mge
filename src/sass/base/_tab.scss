@@ -14,7 +14,7 @@
 }
 
 .tab:hover {
-  background-color: #002233; /* Slightly lighter shade for hover effect */
+  background-color: #002233;
 }
 
 .tab__logo__text {
@@ -25,7 +25,7 @@
 }
 
 .tab__logo__text:hover {
-  color: #1fd0e0; /* Slightly lighter shade for hover effect */
+  color: #1fd0e0;
 }
 
 .tab__mainicon {
@@ -35,7 +35,7 @@
 }
 
 .tab__mainicon:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1);
 }
 
 .tab__list {
@@ -52,8 +52,8 @@
 }
 
 .tab__list__item:hover {
-  background-color: #002233; /* Slightly lighter shade for hover effect */
-  color: #ffffff; /* Change text color on hover */
+  background-color: #002233;
+  color: #ffffff;
 }
 
 .tab__list__item__svg {
@@ -62,8 +62,8 @@
 }
 
 .tab__list__item__svg:hover {
-  fill: #1fd0e0; /* Change SVG fill color on hover */
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  fill: #1fd0e0;
+  transform: scale(1.1);
 }
 
 .settings__menu {
@@ -95,7 +95,31 @@
   .tab__body {
     padding-left: 150px;
   }
-  .tab{
+  .tab {
     width: 40px;
   }
+}
+
+.sidebar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #001c27;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.season-icon {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.current-date {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
 }

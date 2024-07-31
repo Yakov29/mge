@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const fetchProfileData = async () => {
         try {
-            const response = await fetch('https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/1');
+            const response = await fetch('https://669a78899ba098ed61ffc5a3.mockapi.io/accounts/');
             if (!response.ok) throw new Error('Network response was not ok');
             return await response.json();
         } catch (error) {
