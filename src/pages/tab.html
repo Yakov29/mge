@@ -1,102 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../sass/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../sass/main.scss" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <title>Document</title>
-</head>
-
-<body class="tab__body">
-  <div class="tab">
-    <a href="../index.html"><span class="tab__logo__text">ED</span></a>
-    <a href="../pages/dashboard.html">
-      <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" />
-    </a>
-    <ul class="tab__list">
-      <li class="tab__list__item">
-        <a href="./courses.html">
-          <img class="tab__list__item__svg" src="../svg/school.svg" alt="School" />
-        </a>
-      </li>
-      <li class="tab__list__item">
-        <a href="./lessons.html">
-          <img class="tab__list__item__svg" src="../svg/emoji_objects.svg" alt="Emoji Objects" />
-        </a>
-      </li>
-      <li class="tab__list__item">
-        <a href="./rewiews.html">
-          <img class="tab__list__item__svg" src="../svg/chat.svg" alt="Chat" />
-        </a>
-      </li>
-    </ul>
-    <a href="../pages/settings.html" id="profileCircle" class="profile-circle"></a>
-  </div>
-
-  <div class="sidebar">
-    <div class="season-icon">
-      <i id="seasonIcon" class="fas"></i>
+  <body class="tab__body">
+    <div class="tab">
+      <a href="../index.html"><span class="tab__logo__text">ED</span></a>
+      <a href="../pages/dashboard.html">
+        <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" />
+      </a>
+      <ul class="tab__list">
+        <li class="tab__list__item">
+          <a href="./courses.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/school.svg"
+              alt="School"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="./lessons.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/emoji_objects.svg"
+              alt="Emoji Objects"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="./rewiews.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/chat.svg"
+              alt="Chat"
+            />
+          </a>
+        </li>
+      </ul>
+      <a
+        href="../pages/settings.html"
+        id="profileCircle"
+        class="profile-circle"
+      ></a>
     </div>
-    <div class="current-date">
-      <span id="date"></span>
+
+    <div class="sidebar">
+      <div class="season-icon">
+        <i id="seasonIcon" class="fas"></i>
+      </div>
+      <div class="current-date">
+        <span id="date"></span>
+      </div>
     </div>
-  </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const profileButton = document.querySelector("#profileCircle");
-      const dateElement = document.querySelector("#date");
-      const seasonIcon = document.querySelector("#seasonIcon");
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const profileButton = document.querySelector("#profileCircle");
+        const dateElement = document.querySelector("#date");
+        const seasonIcon = document.querySelector("#seasonIcon");
 
-      const updateProfileButton = () => {
-        const userProfile = localStorage.getItem("userProfile");
-        if (userProfile) {
-          const user = JSON.parse(userProfile);
-          profileButton.textContent = user.name[0].toUpperCase();
-        } else {
-          profileButton.style.display = "none";
-        }
-      };
+        const updateProfileButton = () => {
+          const userProfile = localStorage.getItem("userProfile");
+          if (userProfile) {
+            const user = JSON.parse(userProfile);
+            profileButton.textContent = user.name[0].toUpperCase();
+          } else {
+            profileButton.style.display = "none";
+          }
+        };
 
-      const updateDate = () => {
-        const dayNames = ['неділя', 'понеділок', 'вівторок', 'середа', 'четвер', 'пʼятниця', 'субота'];
-        const monthNames = ['січня', 'лютого', 'березня', 'квітня', 'травня', 'червня', 'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'];
+        const updateDate = () => {
+          const dayNames = [
+            "неділя",
+            "понеділок",
+            "вівторок",
+            "середа",
+            "четвер",
+            "пʼятниця",
+            "субота",
+          ];
+          const monthNames = [
+            "січня",
+            "лютого",
+            "березня",
+            "квітня",
+            "травня",
+            "червня",
+            "липня",
+            "серпня",
+            "вересня",
+            "жовтня",
+            "листопада",
+            "грудня",
+          ];
 
-        const date = new Date();
-        const weekday = dayNames[date.getDay()];
-        const day = date.getDate();
-        const month = monthNames[date.getMonth()];
-        const year = date.getFullYear();
+          const date = new Date();
+          const weekday = dayNames[date.getDay()];
+          const day = date.getDate();
+          const month = monthNames[date.getMonth()];
+          const year = date.getFullYear();
 
-        const formattedDate = `Сьогодні ${weekday} ${day} ${month} ${year}`;
-        dateElement.textContent = formattedDate;
-      };
+          const formattedDate = `Сьогодні ${weekday} ${day} ${month} ${year}`;
+          dateElement.textContent = formattedDate;
+        };
 
-      const updateSeasonIcon = () => {
-        const month = new Date().getMonth() + 1; 
-        let iconClass;
-        if (month >= 3 && month <= 5) {
-          iconClass = 'fa-seedling'; 
-        } else if (month >= 6 && month <= 8) {
-          iconClass = 'fa-sun'; 
-        } else if (month >= 9 && month <= 11) {
-          iconClass = 'fa-leaf'; 
-        } else {
-          iconClass = 'fa-snowflake'; 
-        }
-        seasonIcon.className = `fas ${iconClass}`;
-      };
+        const updateSeasonIcon = () => {
+          const month = new Date().getMonth() + 1;
+          let iconClass;
+          if (month >= 3 && month <= 5) {
+            iconClass = "fa-seedling";
+          } else if (month >= 6 && month <= 8) {
+            iconClass = "fa-sun";
+          } else if (month >= 9 && month <= 11) {
+            iconClass = "fa-leaf";
+          } else {
+            iconClass = "fa-snowflake";
+          }
+          seasonIcon.className = `fas ${iconClass}`;
+        };
 
-      updateProfileButton();
-      updateDate();
-      updateSeasonIcon();
-    });
-  </script>
-</body>
-
+        updateProfileButton();
+        updateDate();
+        updateSeasonIcon();
+      });
+    </script>
+  </body>
 </html>

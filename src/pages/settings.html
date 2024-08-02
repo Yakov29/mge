@@ -1,85 +1,101 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../sass/main.scss" />
-  <title>Налаштування акаунта</title>
-</head>
-<body class="tab__body">
-  <div class="tab">
-    <a href="../index.html"><span class="tab__logo__text">ED</span></a>
-    <a href="../pages/dashboard.html">
-      <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" />
-    </a>
-    <ul class="tab__list">
-      <li class="tab__list__item">
-        <a href="./courses.html">
-          <img class="tab__list__item__svg" src="../svg/school.svg" alt="Школа" />
-        </a>
-      </li>
-      <li class="tab__list__item">
-        <a href="./lessons.html">
-          <img class="tab__list__item__svg" src="../svg/emoji_objects.svg" alt="Емоджі об'єкти" />
-        </a>
-      </li>
-      <li class="tab__list__item">
-        <a href="./rewiews.html">
-          <img class="tab__list__item__svg" src="../svg/chat.svg" alt="Чат" />
-        </a>
-      </li>
-    </ul>
-    <button id="notificationsButton">Повідомлення</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../sass/main.scss" />
+    <title>Налаштування акаунта</title>
+  </head>
+  <body class="tab__body">
+    <div class="tab">
+      <a href="../index.html"><span class="tab__logo__text">ED</span></a>
+      <a href="../pages/dashboard.html">
+        <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" />
+      </a>
+      <ul class="tab__list">
+        <li class="tab__list__item">
+          <a href="./courses.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/school.svg"
+              alt="Школа"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="./lessons.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/emoji_objects.svg"
+              alt="Емоджі об'єкти"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="./rewiews.html">
+            <img class="tab__list__item__svg" src="../svg/chat.svg" alt="Чат" />
+          </a>
+        </li>
+      </ul>
+      <button id="notificationsButton">Повідомлення</button>
+    </div>
 
-  <div class="profile-settings">
-    <h1 class="settingsTitle">Налаштування профілю</h1>
-    <div class="profile-name" id="profileName">Ім'я користувача</div>
-    <form id="settingsForm">
-      <label for="name">Ім'я</label>
-      <input type="text" id="name" name="name" required />
-  
-      <label for="surname">Прізвище</label>
-      <input type="text" id="surname" name="surname" required />
-  
-      <label for="password">Пароль</label>
-      <input type="password" id="password" name="password" required />
-  
-      <button type="submit">Зберегти зміни</button>
-      <p style="margin-top: 20px; color: red;">Наразі у нас немає власних серверів, тому профілі користувачів можуть бути не захищеними від можливих загроз. Якщо виникли проблеми, будь ласка, напишіть у повідомленнях в налаштуваннях.</p>
-    </form>
-  </div>
-  
+    <div class="profile-settings">
+      <h1 class="settingsTitle">Налаштування профілю</h1>
+      <div class="profile-name" id="profileName">Ім'я користувача</div>
+      <form id="settingsForm">
+        <label for="name">Ім'я</label>
+        <input type="text" id="name" name="name" required />
 
-  <div id="notificationsModal" class="modal">
-    <div class="modal-content notifications-settings">
-      <div class="modal-header">
-        <h2>Повідомлення</h2>
-        <button id="closeNotificationsModal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <form id="notificationForm">
-          <label for="notificationMessage">Повідомлення</label>
-          <input type="text" id="notificationMessage" name="notificationMessage" required />
-          <button type="submit">Відправити повідомлення</button>
-          <p style="margin-top: 20px; color: red;">Наразі у нас немає власних серверів, тому повідомлення можуть бути не захищеними від можливих загроз.</p>
-        </form>
-        <div id="notificationsList">
+        <label for="surname">Прізвище</label>
+        <input type="text" id="surname" name="surname" required />
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Зберегти зміни</button>
+        <p style="margin-top: 20px; color: red">
+          Наразі у нас немає власних серверів, тому профілі користувачів можуть
+          бути не захищеними від можливих загроз. Якщо виникли проблеми, будь
+          ласка, напишіть у повідомленнях в налаштуваннях.
+        </p>
+      </form>
+    </div>
+
+    <div id="notificationsModal" class="modal">
+      <div class="modal-content notifications-settings">
+        <div class="modal-header">
+          <h2>Повідомлення</h2>
+          <button id="closeNotificationsModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="notificationForm">
+            <label for="notificationMessage">Повідомлення</label>
+            <input
+              type="text"
+              id="notificationMessage"
+              name="notificationMessage"
+              required
+            />
+            <button type="submit">Відправити повідомлення</button>
+            <p style="margin-top: 20px; color: red">
+              Наразі у нас немає власних серверів, тому повідомлення можуть бути
+              не захищеними від можливих загроз.
+            </p>
+          </form>
+          <div id="notificationsList"></div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="sidebar">
-    <div class="season-icon">
-      <i id="seasonIcon" class="fas"></i>
+    <div class="sidebar">
+      <div class="season-icon">
+        <i id="seasonIcon" class="fas"></i>
+      </div>
+      <div class="current-date">
+        <span id="date"></span>
+      </div>
     </div>
-    <div class="current-date">
-      <span id="date"></span>
-    </div>
-  </div>
-  <script type="module" src="../js/tab.js"></script>
-  <script src="../js/settings.js" type="module">
-    
-  </script>
-</body>
+    <script type="module" src="../js/tab.js"></script>
+    <script src="../js/settings.js" type="module"></script>
+  </body>
 </html>

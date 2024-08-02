@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../sass/main.scss" />
+    <title>Уроки Хімії 101</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../sass/main.scss" />
-  <title>Уроки Хімії 101</title>
-</head>
-
-<body class="tab__body">
-  <div class="tab">
-    <a href="../index.html"><span class="tab__logo__text">ED</span></a>
-    <a href="../pages/dashboard.html">
-      <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" />
-    </a>
-    <ul class="tab__list">
-      <li class="tab__list__item">
-        <a href="../pages/courses.html">
-          <img class="tab__list__item__svg" src="../svg/school.svg" alt="School" />
-        </a>
-      </li>
-      <li class="tab__list__item">
-        <a href="../pages/lessons.html">
-          <img class="tab__list__item__svg" src="../svg/emoji_objects.svg" alt="Emoji Objects" />
-        </a>
-      </li>
-      <li class="tab__list__item">
-        <a href="../pages/rewiews.html">
-          <img class="tab__list__item__svg" src="../svg/chat.svg" alt="Chat" />
-        </a>
-      </li>
-    </ul>
-    <a href="../pages/settings.html" id="profileCircle" class="profile-circle"></a>
-  </div>
-
-  <div id="lessonsContainer">
-    <!-- Buttons for lessons will be added here by JavaScript -->
-     
-  </div>
-
-  <!-- Lesson Modal -->
-  <div id="lessonModal">
-    <div id="lessonContent">
-      <!-- Lesson content will be added here -->
-      
+  <body class="tab__body">
+    <div class="tab">
+      <a href="../index.html"><span class="tab__logo__text">ED</span></a>
+      <a href="../pages/dashboard.html">
+        <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" />
+      </a>
+      <ul class="tab__list">
+        <li class="tab__list__item">
+          <a href="../pages/courses.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/school.svg"
+              alt="School"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="../pages/lessons.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/emoji_objects.svg"
+              alt="Emoji Objects"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="../pages/rewiews.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/chat.svg"
+              alt="Chat"
+            />
+          </a>
+        </li>
+      </ul>
+      <a
+        href="../pages/settings.html"
+        id="profileCircle"
+        class="profile-circle"
+      ></a>
     </div>
-  </div>
-  <div class="sidebar">
-    <div class="season-icon">
-      <i id="seasonIcon" class="fas"></i>
-    </div>
-    <div class="current-date">
-      <span id="date"></span>
-    </div>
-  </div>
-  <script type="module" src="../js/tab.js"></script>
-  <script src="../js/learning.js"></script>
-</body>
 
+    <div id="lessonsContainer"></div>
+
+    <div id="lessonModal">
+      <div id="lessonContent"></div>
+    </div>
+    <div class="sidebar">
+      <div class="season-icon">
+        <i id="seasonIcon" class="fas"></i>
+      </div>
+      <div class="current-date">
+        <span id="date"></span>
+      </div>
+    </div>
+    <script type="module" src="../js/tab.js"></script>
+    <script src="../js/learning.js"></script>
+  </body>
 </html>

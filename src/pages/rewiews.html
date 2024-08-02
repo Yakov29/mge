@@ -1,121 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../sass/main.scss">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../sass/main.scss" />
     <title>Document</title>
     <style>
-        .tab__list__item a {
-            display: inline-block;
-            padding: 10px;
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-        }
+      .tab__list__item a {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+      }
 
-        .tab__list__item a.active {
-            background-color: #007bff;
-            border: 2px solid #0056b3;
-        }
+      .tab__list__item a.active {
+        background-color: #007bff;
+        border: 2px solid #0056b3;
+      }
 
-        .delete-review {
-            background-color: #ff0000;
-            color: #ffffff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
+      .delete-review {
+        background-color: #ff0000;
+        color: #ffffff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
 
-        .delete-review:hover {
-            background-color: #cc0000;
-        }
+      .delete-review:hover {
+        background-color: #cc0000;
+      }
     </style>
-</head>
+  </head>
 
-<body class="reviews tab__body">
+  <body class="reviews tab__body">
     <div class="tab">
-        <a href="../index.html"><span class="tab__logo__text">ED</span></a>
-        <a href="../pages/dashboard.html">
-            <img class="tab__mainicon" src="../svg/dashboard.svg" alt="">
-        </a>
-        <ul class="tab__list">
-            <li class="tab__list__item">
-                <a href="./courses.html">
-                    <img class="tab__list__item__svg" src="../svg/school.svg" alt="School">
-                </a>
-            </li>
-            <li class="tab__list__item">
-                <a href="./lessons.html">
-                    <img class="tab__list__item__svg" src="../svg/emoji_objects.svg" alt="Emoji Objects">
-                </a>
-            </li>
-            <li class="tab__list__item">
-                <a href="./rewiews.html">
-                    <img class="tab__list__item__svg" src="../svg/chat.svg" alt="Chat">
-                </a>
-            </li>
-        </ul>
-        <a href="./settings.html" id="profileCircle" class="profile-circle"></a>
+      <a href="../index.html"><span class="tab__logo__text">ED</span></a>
+      <a href="../pages/dashboard.html">
+        <img class="tab__mainicon" src="../svg/dashboard.svg" alt="" />
+      </a>
+      <ul class="tab__list">
+        <li class="tab__list__item">
+          <a href="./courses.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/school.svg"
+              alt="School"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="./lessons.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/emoji_objects.svg"
+              alt="Emoji Objects"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="./rewiews.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/chat.svg"
+              alt="Chat"
+            />
+          </a>
+        </li>
+      </ul>
+      <a href="./settings.html" id="profileCircle" class="profile-circle"></a>
     </div>
 
     <section class="reviews">
-        <h1 class="reviews__title">Відгуки</h1>
-        <div id="reviews-container"></div>
-        
-        <form id="review-form">
-            <input type="text" id="review-name" placeholder="Ваше ім'я" required>
-            <textarea id="review-text" placeholder="Напишіть свій відгук тут..." required></textarea>
-            <div id="review-rating" class="rating">
-                <span data-value="1" class="star">&#9733;</span>
-                <span data-value="2" class="star">&#9733;</span>
-                <span data-value="3" class="star">&#9733;</span>
-                <span data-value="4" class="star">&#9733;</span>
-                <span data-value="5" class="star">&#9733;</span>
-            </div>
-            <button type="submit">Надіслати відгук</button>
-        </form>
+      <h1 class="reviews__title">Відгуки</h1>
+      <div id="reviews-container"></div>
+
+      <form id="review-form">
+        <input type="text" id="review-name" placeholder="Ваше ім'я" required />
+        <textarea
+          id="review-text"
+          placeholder="Напишіть свій відгук тут..."
+          required
+        ></textarea>
+        <div id="review-rating" class="rating">
+          <span data-value="1" class="star">&#9733;</span>
+          <span data-value="2" class="star">&#9733;</span>
+          <span data-value="3" class="star">&#9733;</span>
+          <span data-value="4" class="star">&#9733;</span>
+          <span data-value="5" class="star">&#9733;</span>
+        </div>
+        <button type="submit">Надіслати відгук</button>
+      </form>
     </section>
     <div class="sidebar">
-        <div class="season-icon">
-          <i id="seasonIcon" class="fas"></i>
-        </div>
-        <div class="current-date">
-          <span id="date"></span>
-        </div>
+      <div class="season-icon">
+        <i id="seasonIcon" class="fas"></i>
       </div>
-      <script type="module" src="../js/tab.js"></script>
+      <div class="current-date">
+        <span id="date"></span>
+      </div>
+    </div>
+    <script type="module" src="../js/tab.js"></script>
     <script type="module" src="../js/reviews/reviewsSystem.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const profileCircle = document.getElementById("profileCircle");
+      document.addEventListener("DOMContentLoaded", () => {
+        const profileCircle = document.getElementById("profileCircle");
 
-            const updateProfileButton = () => {
-                const userProfile = localStorage.getItem("userProfile");
-                if (userProfile) {
-                    const user = JSON.parse(userProfile);
-                    profileCircle.textContent = user.name[0].toUpperCase();
-                } else {
-                    profileCircle.style.display = "none";
-                }
-            };
+        const updateProfileButton = () => {
+          const userProfile = localStorage.getItem("userProfile");
+          if (userProfile) {
+            const user = JSON.parse(userProfile);
+            profileCircle.textContent = user.name[0].toUpperCase();
+          } else {
+            profileCircle.style.display = "none";
+          }
+        };
 
-            const currentPath = window.location.pathname;
-            const tabLinks = document.querySelectorAll('.tab__list__item a');
+        const currentPath = window.location.pathname;
+        const tabLinks = document.querySelectorAll(".tab__list__item a");
 
-            tabLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-
-            updateProfileButton();
+        tabLinks.forEach((link) => {
+          if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
         });
+
+        updateProfileButton();
+      });
     </script>
-</body>
+  </body>
 </html>

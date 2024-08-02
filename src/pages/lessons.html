@@ -1,138 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../sass/main.scss">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../sass/main.scss" />
     <title>Уроки</title>
     <style>
-         .tab__list__item a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            transition: background-color 0.3s ease, border 0.3s ease;
-            text-decoration: none;
-        }
+      .tab__list__item a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, border 0.3s ease;
+        text-decoration: none;
+      }
 
-        .tab__list__item a.active {
-            background-color: #007bff;
-            border: 2px solid #0056b3;
-        }
+      .tab__list__item a.active {
+        background-color: #007bff;
+        border: 2px solid #0056b3;
+      }
 
-        .tab__mainicon {
-            width: 24px;
-        }
+      .tab__mainicon {
+        width: 24px;
+      }
 
-        .course-section {
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            margin-top: 50px;
-        }
+      .course-section {
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        margin-top: 50px;
+      }
 
+      .course-section h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: #001c27;
+      }
 
-        .course-section h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #001C27;
-        }
+      .course-section p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+      }
 
-        .course-section p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .course-section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
+      .course-section img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 10px 0;
+      }
     </style>
-</head>
+  </head>
 
-<body class="tab__body">
+  <body class="tab__body">
     <div class="tab">
-        <a href="../index.html"><span class="tab__logo__text">ED</span></a>
-        <a href="../pages/dashboard.html">
-            <img class="tab__mainicon" src="../svg/dashboard.svg" alt="Dashboard">
-        </a>
-        <ul class="tab__list">
-            <li class="tab__list__item">
-                <a href="./courses.html">
-                    <img class="tab__list__item__svg" src="../svg/school.svg" alt="School">
-                </a>
-            </li>
-            <li class="tab__list__item">
-                <a href="./lessons.html">
-                    <img class="tab__list__item__svg" src="../svg/emoji_objects.svg" alt="Emoji Objects">
-                </a>
-            </li>
-            <li class="tab__list__item">
-                <a href="./rewiews.html">
-                    <img class="tab__list__item__svg" src="../svg/chat.svg" alt="Chat">
-                </a>
-            </li>
-        </ul>
-        <a href="../pages/settings.html" id="profileCircle" class="profile-circle"></a>
+      <a href="../index.html"><span class="tab__logo__text">ED</span></a>
+      <a href="../pages/dashboard.html">
+        <img class="tab__mainicon" src="../svg/dashboard.svg" alt="Dashboard" />
+      </a>
+      <ul class="tab__list">
+        <li class="tab__list__item">
+          <a href="./courses.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/school.svg"
+              alt="School"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="./lessons.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/emoji_objects.svg"
+              alt="Emoji Objects"
+            />
+          </a>
+        </li>
+        <li class="tab__list__item">
+          <a href="./rewiews.html">
+            <img
+              class="tab__list__item__svg"
+              src="../svg/chat.svg"
+              alt="Chat"
+            />
+          </a>
+        </li>
+      </ul>
+      <a href="../pages/settings.html" id="profileCircle" class="profile-circle"
+        >￴￴</a>
     </div>
 
     <h1 class="lessons__title">Уроки</h1>
 
+    <div id="coursesSection"></div>
     <div id="coursesSection">
-        
-    </div>
-    <div id="coursesSection">
-        <div class="course-section">
-            <h2>Основи Хімії</h2>
-            <p>У цьому курсі ми вивчимо базові принципи хімії, включаючи атомну структуру, хімічні зв'язки та основні реакції. Курс призначений для початківців, які хочуть отримати загальне уявлення про хімічні процеси та речовини.</p>
-        </div>
-    
-        <div class="course-section">
-            <h2>Органічна Хімія</h2>
-            <p>Цей курс охоплює органічну хімію, яка вивчає сполуки вуглецю. Ми розглянемо різні групи органічних сполук, їх властивості, реакції та застосування. Підходить для студентів, які бажають поглибити свої знання в цій області.</p>
-        </div>
-    
-        <div class="course-section">
-            <h2>Аналітична Хімія</h2>
-            <p>Курс аналітичної хімії надає знання про методи аналізу речовин та їх компонентів. Ми вивчимо якісні та кількісні методи аналізу, такі як хроматографія, спектроскопія та інші.</p>
-        </div>
+      <div class="course-section">
+        <h2>Основи Хімії</h2>
+        <p>
+          У цьому курсі ми вивчимо базові принципи хімії, включаючи атомну
+          структуру, хімічні зв'язки та основні реакції. Курс призначений для
+          початківців, які хочуть отримати загальне уявлення про хімічні процеси
+          та речовини.
+        </p>
+      </div>
+
+      <div class="course-section">
+        <h2>Органічна Хімія</h2>
+        <p>
+          Цей курс охоплює органічну хімію, яка вивчає сполуки вуглецю. Ми
+          розглянемо різні групи органічних сполук, їх властивості, реакції та
+          застосування. Підходить для студентів, які бажають поглибити свої
+          знання в цій області.
+        </p>
+      </div>
+
+      <div class="course-section">
+        <h2>Аналітична Хімія</h2>
+        <p>
+          Курс аналітичної хімії надає знання про методи аналізу речовин та їх
+          компонентів. Ми вивчимо якісні та кількісні методи аналізу, такі як
+          хроматографія, спектроскопія та інші.
+        </p>
+      </div>
     </div>
     <div class="sidebar">
-        <div class="season-icon">
-          <i id="seasonIcon" class="fas"></i>
-        </div>
-        <div class="current-date">
-          <span id="date"></span>
-        </div>
+      <div class="season-icon">
+        <i id="seasonIcon" class="fas"></i>
       </div>
-      <script type="module" src="../js/tab.js"></script>
+      <div class="current-date">
+        <span id="date"></span>
+      </div>
+    </div>
+    <script type="module" src="../js/tab.js"></script>
     <script type="module" src="../js/lessons.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const currentPath = window.location.pathname;
-            const tabLinks = document.querySelectorAll('.tab__list__item a');
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname;
+        const tabLinks = document.querySelectorAll(".tab__list__item a");
 
-            tabLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
+        tabLinks.forEach((link) => {
+          if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
         });
+      });
     </script>
-</body>
-
+  </body>
 </html>
