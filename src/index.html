@@ -16,7 +16,6 @@
     <header>
         <div class="container">
             <span class="header__logo">ED</span>
-           
             <nav class="nav">
                 <a href="./pages/tab.html" class="nav__item">Головна</a>
                 <a href="#footer" class="nav__item">Контакти</a>
@@ -29,7 +28,7 @@
                     <a href="./pages/settings.html" id="profile-link" class="profile__circle change__invisible">-</a>
                     <a href="./pages/dashboard.html" id="board-link" class="board__button change__invisible">Дошка</a>
                     <button id="logout-button" class="logout__button change__invisible">Вийти</button>
-                </div>                
+                </div>
             </div>
         </div>
     </header>
@@ -47,8 +46,8 @@
             <div class="footer__box">
                 <span class="footer__logo">EDTech</span>
                 <ul class="footer__list">
-                    <li class="address__item"><a href="" class="address__link">+911</a></li>
-                    <li class="address__item"><a href="" class="address__link">EDTech.chemistry@gmail.com</a></li>
+                    <li class="address__item"><a href="#" class="address__link">+911</a></li>
+                    <li class="address__item"><a href="mailto:EDTech.chemistry@gmail.com" class="address__link">EDTech.chemistry@gmail.com</a></li>
                     <li class="address__item"><a href="https://maps.app.goo.gl/ZKdGWR2Hb4qPPnKC9" class="address__link">США, Маямі</a></li>
                     <li class="address__item"><a href="./pages/sponsors.html" class="address__link">Спонсори</a></li>
                 </ul>
@@ -57,13 +56,12 @@
                 <h3 class="work__title">Для працевлаштування</h3>
                 <button class="work__send__btn">Подати запит</button>
                 <p class="work__description">Ми відповідаємо вам якнайшвидше</p>
-                
             </div>
         </div>
     </footer>
     <div class="register__modal change__invisible">
         <form class="register__form">
-            <img class="cross__svg" width="40px" height="40px" src="./svg/cross.svg" alt="awd">
+            <img class="cross__svg" width="40" height="40" src="./svg/cross.svg" alt="Закрити">
             <h1 class="register__title">Реєстрація</h1>
             <div class="register__input__box">
                 <input placeholder="Ім'я" name="profilename" class="register__social">
@@ -77,7 +75,7 @@
     </div>
     <div class="login__modal change__invisible">
         <form class="login__form">
-            <img class="cross__svg" width="40px" height="40px" src="./svg/cross.svg" alt="awd">
+            <img class="cross__svg" width="40" height="40" src="./svg/cross.svg" alt="Закрити">
             <h1 class="login__title">Вхід</h1>
             <div class="login__input__box">
                 <input placeholder="Логін" name="profilelogin" class="login__social">
@@ -88,15 +86,13 @@
     </div>
     <div id="adminRequestModal" class="admin-request-modal change__invisible">
         <form class="admin-request-form">
-            <img class="cross__svg" width="40px" height="40px" src="./svg/cross.svg" alt="Закрити">
+            <img class="cross__svg" width="40" height="40" src="./svg/cross.svg" alt="Закрити">
             <h1 class="admin-request-title">Запит на адміністратора</h1>
             <p id="userName"></p>
             <input id="adminConfirmation" placeholder="Напишіть 'так', щоб стати адміністратором" class="admin-confirmation-input">
             <button type="button" id="submitAdminRequest" class="submit-admin-request-button">Подати запит</button>
         </form>
     </div>
-    
-
     <script src="./index.js" type="module"></script>
 </body>
 
