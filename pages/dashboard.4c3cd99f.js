@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"ebeOw":[function(require,module,exports) {
+})({"b88cQ":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "bf3b4b46acf60195";
+module.bundle.HMR_BUNDLE_ID = "00fcc81f4c3cd99f";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -583,8 +583,64 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"igJse":[function(require,module,exports) {
+},{}],"iNevB":[function(require,module,exports) {
+document.addEventListener("DOMContentLoaded", ()=>{
+    const profileButton = document.querySelector("#profileCircle");
+    const dateElement = document.querySelector("#date");
+    const seasonIcon = document.querySelector("#seasonIcon");
+    const updateProfileButton = ()=>{
+        const userProfile = localStorage.getItem("userProfile");
+        if (userProfile) {
+            const user = JSON.parse(userProfile);
+            profileButton.textContent = user.name[0].toUpperCase();
+        } else profileButton.style.display = "none";
+    };
+    const updateDate = ()=>{
+        const dayNames = [
+            "\u043D\u0435\u0434\u0456\u043B\u044F",
+            "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A",
+            "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A",
+            "\u0441\u0435\u0440\u0435\u0434\u0430",
+            "\u0447\u0435\u0442\u0432\u0435\u0440",
+            "\u043F\u02BC\u044F\u0442\u043D\u0438\u0446\u044F",
+            "\u0441\u0443\u0431\u043E\u0442\u0430"
+        ];
+        const monthNames = [
+            "\u0441\u0456\u0447\u043D\u044F",
+            "\u043B\u044E\u0442\u043E\u0433\u043E",
+            "\u0431\u0435\u0440\u0435\u0437\u043D\u044F",
+            "\u043A\u0432\u0456\u0442\u043D\u044F",
+            "\u0442\u0440\u0430\u0432\u043D\u044F",
+            "\u0447\u0435\u0440\u0432\u043D\u044F",
+            "\u043B\u0438\u043F\u043D\u044F",
+            "\u0441\u0435\u0440\u043F\u043D\u044F",
+            "\u0432\u0435\u0440\u0435\u0441\u043D\u044F",
+            "\u0436\u043E\u0432\u0442\u043D\u044F",
+            "\u043B\u0438\u0441\u0442\u043E\u043F\u0430\u0434\u0430",
+            "\u0433\u0440\u0443\u0434\u043D\u044F"
+        ];
+        const date = new Date();
+        const weekday = dayNames[date.getDay()];
+        const day = date.getDate();
+        const month = monthNames[date.getMonth()];
+        const year = date.getFullYear();
+        const formattedDate = `\u{421}\u{44C}\u{43E}\u{433}\u{43E}\u{434}\u{43D}\u{456} ${weekday} ${day} ${month} ${year}`;
+        dateElement.textContent = formattedDate;
+    };
+    const updateSeasonIcon = ()=>{
+        const month = new Date().getMonth() + 1;
+        let iconClass;
+        if (month >= 3 && month <= 5) iconClass = "fa-seedling";
+        else if (month >= 6 && month <= 8) iconClass = "fa-sun";
+        else if (month >= 9 && month <= 11) iconClass = "fa-leaf";
+        else iconClass = "fa-snowflake";
+        seasonIcon.className = `fas ${iconClass}`;
+    };
+    updateProfileButton();
+    updateDate();
+    updateSeasonIcon();
+});
 
-},{}]},["ebeOw","igJse"], "igJse", "parcelRequirecf3a")
+},{}]},["b88cQ","iNevB"], "iNevB", "parcelRequirecf3a")
 
-//# sourceMappingURL=lessons.acf60195.js.map
+//# sourceMappingURL=dashboard.4c3cd99f.js.map

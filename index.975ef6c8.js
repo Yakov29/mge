@@ -589,7 +589,7 @@ var _addProfileJs = require("./js/profile/addProfile.js");
 var _profileSystemJs = require("./js/profile/profileSystem.js");
 var _settingsJs = require("./js/settings.js");
 
-},{"./js/home.js":"cEl3V","./js/profile/profileSystem.js":"3rbMf","./js/profile/addProfile.js":"4GtSn","./js/settings.js":"dXtqq"}],"cEl3V":[function(require,module,exports) {
+},{"./js/home.js":"cEl3V","./js/profile/addProfile.js":"4GtSn","./js/profile/profileSystem.js":"3rbMf","./js/settings.js":"dXtqq"}],"cEl3V":[function(require,module,exports) {
 document.addEventListener("DOMContentLoaded", ()=>{
     const modals = {
         register: document.querySelector(".register__modal"),
@@ -668,67 +668,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         } else alert("\u0412\u0432\u0435\u0434\u0456\u0442\u044C '\u0442\u0430\u043A', \u0449\u043E\u0431 \u043F\u0456\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u0438.");
     });
 });
-
-},{}],"3rbMf":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "addProfile", ()=>addProfile);
-parcelHelpers.export(exports, "getProfiles", ()=>getProfiles);
-const baseURL = "https://669a78899ba098ed61ffc5a3.mockapi.io/accounts";
-const addProfile = async (profile)=>{
-    try {
-        const response = await fetch(baseURL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(profile)
-        });
-        if (!response.ok) throw new Error("Network response was not ok");
-        return await response.json();
-    } catch (error) {
-        throw new Error(`Registration failed: ${error.message}`);
-    }
-};
-const getProfiles = async ()=>{
-    try {
-        const response = await fetch(baseURL);
-        if (!response.ok) throw new Error("Network response was not ok");
-        return await response.json();
-    } catch (error) {
-        throw new Error(`Failed to fetch profiles: ${error.message}`);
-    }
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
 
 },{}],"4GtSn":[function(require,module,exports) {
 var _profileSystem = require("./profileSystem");
@@ -862,6 +801,67 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 });
 
-},{"./profileSystem":"3rbMf"}]},["farZc","8lqZg"], "8lqZg", "parcelRequirecf3a")
+},{"./profileSystem":"3rbMf"}],"3rbMf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "addProfile", ()=>addProfile);
+parcelHelpers.export(exports, "getProfiles", ()=>getProfiles);
+const baseURL = "https://669a78899ba098ed61ffc5a3.mockapi.io/accounts";
+const addProfile = async (profile)=>{
+    try {
+        const response = await fetch(baseURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(profile)
+        });
+        if (!response.ok) throw new Error("Network response was not ok");
+        return await response.json();
+    } catch (error) {
+        throw new Error(`Registration failed: ${error.message}`);
+    }
+};
+const getProfiles = async ()=>{
+    try {
+        const response = await fetch(baseURL);
+        if (!response.ok) throw new Error("Network response was not ok");
+        return await response.json();
+    } catch (error) {
+        throw new Error(`Failed to fetch profiles: ${error.message}`);
+    }
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["farZc","8lqZg"], "8lqZg", "parcelRequirecf3a")
 
 //# sourceMappingURL=index.975ef6c8.js.map

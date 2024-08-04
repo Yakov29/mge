@@ -101,6 +101,7 @@ button {
   background-color: #001c27;
   flex-direction: column;
   align-items: center;
+  padding: 20px 52px 52px;
   transition: background-color .3s;
   display: flex;
   position: fixed;
@@ -193,13 +194,7 @@ button {
   }
 
   .tab {
-    width: 100px;
-  }
-}
-
-@media (width >= 768px) {
-  .tab {
-    padding: 20px 52px 52px;
+    width: 40px;
   }
 }
 
@@ -823,11 +818,10 @@ body {
 }
 
 .calendar-container {
-  background-color: #f5f5f5;
   border: 1px solid #ddd;
   border-radius: 8px;
   max-width: 800px;
-  margin: auto;
+  margin-top: 50px;
   padding: 20px;
 }
 
