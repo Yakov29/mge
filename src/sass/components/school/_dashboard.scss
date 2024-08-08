@@ -221,8 +221,13 @@
 
 @media (max-width: 600px) {
   .calendar-header {
-    flex-direction: column;
-    align-items: flex-start;
+    display: none;
+  }
+  .calendar-month {
+    display: none;
+  }
+  .calendar-day {
+    display: none;
   }
 
   .calendar-button {
