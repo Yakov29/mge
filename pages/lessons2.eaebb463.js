@@ -1,4 +1,9 @@
-document.addEventListener("DOMContentLoaded",()=>{let u=[{id:1,name:"Основи органічної хімії",content:`
+document.addEventListener("DOMContentLoaded", ()=>{
+    const lessons = [
+        {
+            id: 1,
+            name: "\u041E\u0441\u043D\u043E\u0432\u0438 \u043E\u0440\u0433\u0430\u043D\u0456\u0447\u043D\u043E\u0457 \u0445\u0456\u043C\u0456\u0457",
+            content: `
           <h2>\u{41E}\u{441}\u{43D}\u{43E}\u{432}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{445}\u{456}\u{43C}\u{456}\u{457}</h2>
           <p>\u{41E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{430} \u{445}\u{456}\u{43C}\u{456}\u{44F} \u{454} \u{432}\u{430}\u{436}\u{43B}\u{438}\u{432}\u{43E}\u{44E} \u{433}\u{430}\u{43B}\u{443}\u{437}\u{437}\u{44E} \u{445}\u{456}\u{43C}\u{456}\u{457}, \u{44F}\u{43A}\u{430} \u{432}\u{438}\u{432}\u{447}\u{430}\u{454} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}\u{438} \u{432}\u{443}\u{433}\u{43B}\u{435}\u{446}\u{44E}, \u{457}\u{445}\u{43D}\u{44E} \u{441}\u{442}\u{440}\u{443}\u{43A}\u{442}\u{443}\u{440}\u{443}, \u{432}\u{43B}\u{430}\u{441}\u{442}\u{438}\u{432}\u{43E}\u{441}\u{442}\u{456} \u{442}\u{430} \u{440}\u{435}\u{430}\u{43A}\u{446}\u{456}\u{457}. \u{426}\u{435}\u{439} \u{440}\u{43E}\u{437}\u{434}\u{456}\u{43B} \u{445}\u{456}\u{43C}\u{456}\u{457} \u{43C}\u{430}\u{454} \u{432}\u{435}\u{43B}\u{438}\u{43A}\u{435} \u{437}\u{43D}\u{430}\u{447}\u{435}\u{43D}\u{43D}\u{44F} \u{44F}\u{43A} \u{443} \u{43F}\u{440}\u{438}\u{440}\u{43E}\u{434}\u{456}, \u{442}\u{430}\u{43A} \u{456} \u{432} \u{43F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{43E}\u{441}\u{442}\u{456}. \u{423} \u{446}\u{44C}\u{43E}\u{43C}\u{443} \u{443}\u{440}\u{43E}\u{446}\u{456} \u{43C}\u{438} \u{43E}\u{437}\u{43D}\u{430}\u{439}\u{43E}\u{43C}\u{438}\u{43C}\u{43E}\u{441}\u{44F} \u{437} \u{43E}\u{441}\u{43D}\u{43E}\u{432}\u{43D}\u{438}\u{43C}\u{438} \u{43F}\u{43E}\u{43D}\u{44F}\u{442}\u{442}\u{44F}\u{43C}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{445}\u{456}\u{43C}\u{456}\u{457}, \u{442}\u{430}\u{43A}\u{438}\u{43C}\u{438} \u{44F}\u{43A} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}\u{438}, \u{457}\u{445} \u{43A}\u{43B}\u{430}\u{441}\u{438}\u{444}\u{456}\u{43A}\u{430}\u{446}\u{456}\u{44F} \u{442}\u{430} \u{432}\u{43B}\u{430}\u{441}\u{442}\u{438}\u{432}\u{43E}\u{441}\u{442}\u{456}, \u{430} \u{442}\u{430}\u{43A}\u{43E}\u{436} \u{440}\u{43E}\u{437}\u{433}\u{43B}\u{44F}\u{43D}\u{435}\u{43C}\u{43E} \u{457}\u{445} \u{437}\u{43D}\u{430}\u{447}\u{435}\u{43D}\u{43D}\u{44F} \u{443} \u{440}\u{456}\u{437}\u{43D}\u{438}\u{445} \u{441}\u{444}\u{435}\u{440}\u{430}\u{445}.
 
@@ -48,7 +53,12 @@ document.addEventListener("DOMContentLoaded",()=>{let u=[{id:1,name:"Основ�
 \u{426}\u{435}\u{439} \u{443}\u{440}\u{43E}\u{43A} \u{434}\u{43E}\u{43F}\u{43E}\u{43C}\u{430}\u{433}\u{430}\u{454} \u{437}\u{440}\u{43E}\u{437}\u{443}\u{43C}\u{456}\u{442}\u{438} \u{43E}\u{441}\u{43D}\u{43E}\u{432}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{445}\u{456}\u{43C}\u{456}\u{457} \u{442}\u{430} \u{457}\u{457} \u{437}\u{43D}\u{430}\u{447}\u{435}\u{43D}\u{43D}\u{44F} \u{44F}\u{43A} \u{443} \u{43F}\u{440}\u{438}\u{440}\u{43E}\u{434}\u{456}, \u{442}\u{430}\u{43A} \u{456} \u{432} \u{43F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{43E}\u{441}\u{442}\u{456}.</p>
           <img src="https://fs04.vseosvita.ua/04018jk8-33f2-1200x630.png" alt="\u{41E}\u{441}\u{43D}\u{43E}\u{432}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{445}\u{456}\u{43C}\u{456}\u{457}" style="width: 100%; height: auto; margin-bottom: 20px;">
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/R0uXE11aano?si=wcO-Y2nQ7JH0zxWu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `},{id:2,name:"Гомологічний ряд алканів",content:`
+        `
+        },
+        {
+            id: 2,
+            name: "\u0413\u043E\u043C\u043E\u043B\u043E\u0433\u0456\u0447\u043D\u0438\u0439 \u0440\u044F\u0434 \u0430\u043B\u043A\u0430\u043D\u0456\u0432",
+            content: `
           <h2>\u{413}\u{43E}\u{43C}\u{43E}\u{43B}\u{43E}\u{433}\u{456}\u{447}\u{43D}\u{438}\u{439} \u{440}\u{44F}\u{434} \u{430}\u{43B}\u{43A}\u{430}\u{43D}\u{456}\u{432}</h2>
           <p>\u{413}\u{43E}\u{43C}\u{43E}\u{43B}\u{43E}\u{433}\u{456}\u{447}\u{43D}\u{438}\u{439} \u{440}\u{44F}\u{434} \u{430}\u{43B}\u{43A}\u{430}\u{43D}\u{456}\u{432}
 \u{410}\u{43B}\u{43A}\u{430}\u{43D}\u{438} \u{454} \u{43D}\u{430}\u{439}\u{43F}\u{440}\u{43E}\u{441}\u{442}\u{456}\u{448}\u{438}\u{43C}\u{438} \u{43F}\u{440}\u{435}\u{434}\u{441}\u{442}\u{430}\u{432}\u{43D}\u{438}\u{43A}\u{430}\u{43C}\u{438} \u{432}\u{443}\u{433}\u{43B}\u{435}\u{432}\u{43E}\u{434}\u{43D}\u{456}\u{432} \u{456} \u{441}\u{43A}\u{43B}\u{430}\u{434}\u{430}\u{44E}\u{442}\u{44C} \u{432}\u{430}\u{436}\u{43B}\u{438}\u{432}\u{443} \u{447}\u{430}\u{441}\u{442}\u{438}\u{43D}\u{443} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{445}\u{456}\u{43C}\u{456}\u{457}. \u{412} \u{446}\u{44C}\u{43E}\u{43C}\u{443} \u{443}\u{440}\u{43E}\u{446}\u{456} \u{43C}\u{438} \u{440}\u{43E}\u{437}\u{433}\u{43B}\u{44F}\u{43D}\u{435}\u{43C}\u{43E} \u{433}\u{43E}\u{43C}\u{43E}\u{43B}\u{43E}\u{433}\u{456}\u{447}\u{43D}\u{438}\u{439} \u{440}\u{44F}\u{434} \u{430}\u{43B}\u{43A}\u{430}\u{43D}\u{456}\u{432}, \u{457}\u{445}\u{43D}\u{456} \u{432}\u{43B}\u{430}\u{441}\u{442}\u{438}\u{432}\u{43E}\u{441}\u{442}\u{456}, \u{43C}\u{435}\u{442}\u{43E}\u{434}\u{438} \u{441}\u{438}\u{43D}\u{442}\u{435}\u{437}\u{443} \u{442}\u{430} \u{437}\u{430}\u{441}\u{442}\u{43E}\u{441}\u{443}\u{432}\u{430}\u{43D}\u{43D}\u{44F}. \u{412}\u{438} \u{434}\u{456}\u{437}\u{43D}\u{430}\u{454}\u{442}\u{435}\u{441}\u{44F} \u{43F}\u{440}\u{43E} \u{444}\u{456}\u{437}\u{438}\u{447}\u{43D}\u{456} \u{442}\u{430} \u{445}\u{456}\u{43C}\u{456}\u{447}\u{43D}\u{456} \u{432}\u{43B}\u{430}\u{441}\u{442}\u{438}\u{432}\u{43E}\u{441}\u{442}\u{456} \u{430}\u{43B}\u{43A}\u{430}\u{43D}\u{456}\u{432}, \u{430} \u{442}\u{430}\u{43A}\u{43E}\u{436} \u{457}\u{445}\u{43D}\u{456} \u{441}\u{442}\u{440}\u{443}\u{43A}\u{442}\u{443}\u{440}\u{43D}\u{456} \u{43E}\u{441}\u{43E}\u{431}\u{43B}\u{438}\u{432}\u{43E}\u{441}\u{442}\u{456}.
@@ -211,7 +221,12 @@ C2H4+H2\u{2192}C2H6
 \u{41E}\u{43F}\u{438}\u{448}\u{456}\u{442}\u{44C} \u{437}\u{430}\u{441}\u{442}\u{43E}\u{441}\u{443}\u{432}\u{430}\u{43D}\u{43D}\u{44F} \u{430}\u{43B}\u{43A}\u{430}\u{43D}\u{456}\u{432} \u{443} \u{43F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{43E}\u{441}\u{442}\u{456} \u{442}\u{430} \u{43F}\u{43E}\u{431}\u{443}\u{442}\u{456}.</p>
           <img src="https://naurok.com.ua/uploads/blog-2020/05%D0%B0%D0%BB%D0%BA%D0%B0%D0%BD.png" alt="\u{413}\u{43E}\u{43C}\u{43E}\u{43B}\u{43E}\u{433}\u{456}\u{447}\u{43D}\u{438}\u{439} \u{440}\u{44F}\u{434} \u{430}\u{43B}\u{43A}\u{430}\u{43D}\u{456}\u{432}" style="width: 100%; height: auto; margin-bottom: 20px;">
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/YGVLJefOxoI?si=l67si9i6TOcgq9Qo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `},{id:3,name:"Хімічні властивості алкенів та алкінів",content:`
+        `
+        },
+        {
+            id: 3,
+            name: "\u0425\u0456\u043C\u0456\u0447\u043D\u0456 \u0432\u043B\u0430\u0441\u0442\u0438\u0432\u043E\u0441\u0442\u0456 \u0430\u043B\u043A\u0435\u043D\u0456\u0432 \u0442\u0430 \u0430\u043B\u043A\u0456\u043D\u0456\u0432",
+            content: `
           <h2>\u{425}\u{456}\u{43C}\u{456}\u{447}\u{43D}\u{456} \u{432}\u{43B}\u{430}\u{441}\u{442}\u{438}\u{432}\u{43E}\u{441}\u{442}\u{456} \u{430}\u{43B}\u{43A}\u{435}\u{43D}\u{456}\u{432} \u{442}\u{430} \u{430}\u{43B}\u{43A}\u{456}\u{43D}\u{456}\u{432}</h2>
           <p>
 \u{425}\u{456}\u{43C}\u{456}\u{447}\u{43D}\u{456} \u{432}\u{43B}\u{430}\u{441}\u{442}\u{438}\u{432}\u{43E}\u{441}\u{442}\u{456} \u{430}\u{43B}\u{43A}\u{435}\u{43D}\u{456}\u{432} \u{442}\u{430} \u{430}\u{43B}\u{43A}\u{456}\u{43D}\u{456}\u{432}
@@ -926,7 +941,12 @@ n
 </p>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy30BC2MY1J4N12FIXUcxEqgujoYM7Q_LS-A&s" alt="\u{425}\u{456}\u{43C}\u{456}\u{447}\u{43D}\u{456} \u{432}\u{43B}\u{430}\u{441}\u{442}\u{438}\u{432}\u{43E}\u{441}\u{442}\u{456} \u{430}\u{43B}\u{43A}\u{435}\u{43D}\u{456}\u{432} \u{442}\u{430} \u{430}\u{43B}\u{43A}\u{456}\u{43D}\u{456}\u{432}" style="width: 100%; height: auto; margin-bottom: 20px;">
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/hhmzmG0zk_4?si=TKpCUEp3_rYsaly2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `},{id:4,name:"Функціональні групи органічних сполук",content:`
+        `
+        },
+        {
+            id: 4,
+            name: "\u0424\u0443\u043D\u043A\u0446\u0456\u043E\u043D\u0430\u043B\u044C\u043D\u0456 \u0433\u0440\u0443\u043F\u0438 \u043E\u0440\u0433\u0430\u043D\u0456\u0447\u043D\u0438\u0445 \u0441\u043F\u043E\u043B\u0443\u043A",
+            content: `
           <h2>\u{424}\u{443}\u{43D}\u{43A}\u{446}\u{456}\u{43E}\u{43D}\u{430}\u{43B}\u{44C}\u{43D}\u{456} \u{433}\u{440}\u{443}\u{43F}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{438}\u{445} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}</h2>
           <p>\u{424}\u{443}\u{43D}\u{43A}\u{446}\u{456}\u{43E}\u{43D}\u{430}\u{43B}\u{44C}\u{43D}\u{456} \u{433}\u{440}\u{443}\u{43F}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{438}\u{445} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}
 \u{423} \u{446}\u{44C}\u{43E}\u{43C}\u{443} \u{443}\u{440}\u{43E}\u{446}\u{456} \u{43C}\u{438} \u{432}\u{438}\u{432}\u{447}\u{438}\u{43C}\u{43E} \u{440}\u{456}\u{437}\u{43D}\u{456} \u{444}\u{443}\u{43D}\u{43A}\u{446}\u{456}\u{43E}\u{43D}\u{430}\u{43B}\u{44C}\u{43D}\u{456} \u{433}\u{440}\u{443}\u{43F}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{438}\u{445} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}, \u{457}\u{445}\u{43D}\u{44E} \u{441}\u{442}\u{440}\u{443}\u{43A}\u{442}\u{443}\u{440}\u{443} \u{442}\u{430} \u{440}\u{435}\u{430}\u{43A}\u{446}\u{456}\u{439}\u{43D}\u{443} \u{437}\u{434}\u{430}\u{442}\u{43D}\u{456}\u{441}\u{442}\u{44C}. \u{412}\u{438} \u{434}\u{456}\u{437}\u{43D}\u{430}\u{454}\u{442}\u{435}\u{441}\u{44F} \u{43F}\u{440}\u{43E} \u{441}\u{43F}\u{438}\u{440}\u{442}\u{438}, \u{430}\u{43B}\u{44C}\u{434}\u{435}\u{433}\u{456}\u{434}\u{438}, \u{43A}\u{435}\u{442}\u{43E}\u{43D}\u{438} \u{442}\u{430} \u{456}\u{43D}\u{448}\u{456} \u{433}\u{440}\u{443}\u{43F}\u{438}.
@@ -1302,7 +1322,12 @@ R\u{2212}COOH+R
 \u{412}\u{43A}\u{430}\u{436}\u{456}\u{442}\u{44C} \u{43E}\u{441}\u{43D}\u{43E}\u{432}\u{43D}\u{456} \u{440}\u{435}\u{430}\u{43A}\u{446}\u{456}\u{457} \u{434}\u{43B}\u{44F} \u{43A}\u{43E}\u{436}\u{43D}\u{43E}\u{457} \u{437} \u{446}\u{438}\u{445} \u{444}\u{443}\u{43D}\u{43A}\u{446}\u{456}\u{43E}\u{43D}\u{430}\u{43B}\u{44C}\u{43D}\u{438}\u{445} \u{433}\u{440}\u{443}\u{43F}.</p>
           <img src="https://uahistory.co/zno/chemistry-zno-2020-berezan-comprehensive-edition/chemistry-zno-2020-berezan-comprehensive-edition.files/image608.jpg" alt="\u{424}\u{443}\u{43D}\u{43A}\u{446}\u{456}\u{43E}\u{43D}\u{430}\u{43B}\u{44C}\u{43D}\u{456} \u{433}\u{440}\u{443}\u{43F}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{438}\u{445} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}" style="width: 100%; height: auto; margin-bottom: 20px;">
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/OQ1UYjrmJ28?si=gjnI37A4nf4VWDyt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `},{id:5,name:"Органічні реакції",content:`
+        `
+        },
+        {
+            id: 5,
+            name: "\u041E\u0440\u0433\u0430\u043D\u0456\u0447\u043D\u0456 \u0440\u0435\u0430\u043A\u0446\u0456\u0457",
+            content: `
           <h2>\u{41E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{440}\u{435}\u{430}\u{43A}\u{446}\u{456}\u{457}</h2>
           <p>\u{41E}\u{441}\u{43D}\u{43E}\u{432}\u{43D}\u{456} \u{442}\u{438}\u{43F}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{438}\u{445} \u{440}\u{435}\u{430}\u{43A}\u{446}\u{456}\u{439}
 \u{423} \u{446}\u{44C}\u{43E}\u{43C}\u{443} \u{443}\u{440}\u{43E}\u{446}\u{456} \u{43C}\u{438} \u{432}\u{438}\u{432}\u{447}\u{438}\u{43C}\u{43E} \u{43E}\u{441}\u{43D}\u{43E}\u{432}\u{43D}\u{456} \u{442}\u{438}\u{43F}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{438}\u{445} \u{440}\u{435}\u{430}\u{43A}\u{446}\u{456}\u{439}, \u{442}\u{430}\u{43A}\u{456} \u{44F}\u{43A} \u{437}\u{430}\u{43C}\u{456}\u{449}\u{435}\u{43D}\u{43D}\u{44F}, \u{434}\u{43E}\u{434}\u{430}\u{432}\u{430}\u{43D}\u{43D}\u{44F} \u{442}\u{430} \u{435}\u{43B}\u{456}\u{43C}\u{456}\u{43D}\u{430}\u{446}\u{456}\u{44F}. \u{41C}\u{438} \u{442}\u{430}\u{43A}\u{43E}\u{436} \u{43E}\u{437}\u{43D}\u{430}\u{439}\u{43E}\u{43C}\u{438}\u{43C}\u{43E}\u{441}\u{44F} \u{437} \u{443}\u{43C}\u{43E}\u{432}\u{430}\u{43C}\u{438} \u{457}\u{445} \u{43F}\u{440}\u{43E}\u{442}\u{456}\u{43A}\u{430}\u{43D}\u{43D}\u{44F} \u{442}\u{430} \u{43F}\u{440}\u{438}\u{43A}\u{43B}\u{430}\u{434}\u{430}\u{43C}\u{438} \u{437} \u{436}\u{438}\u{442}\u{442}\u{44F}.
@@ -1847,7 +1872,12 @@ C
 \u{41D}\u{430}\u{432}\u{435}\u{434}\u{456}\u{442}\u{44C} \u{43F}\u{440}\u{438}\u{43A}\u{43B}\u{430}\u{434}\u{438} \u{440}\u{435}\u{430}\u{43B}\u{44C}\u{43D}\u{438}\u{445} \u{43F}\u{440}\u{43E}\u{446}\u{435}\u{441}\u{456}\u{432}, \u{434}\u{435} \u{432}\u{438}\u{43A}\u{43E}\u{440}\u{438}\u{441}\u{442}\u{43E}\u{432}\u{443}\u{44E}\u{442}\u{44C}\u{441}\u{44F} \u{440}\u{435}\u{430}\u{43A}\u{446}\u{456}\u{457} \u{437}\u{430}\u{43C}\u{456}\u{449}\u{435}\u{43D}\u{43D}\u{44F}, \u{434}\u{43E}\u{434}\u{430}\u{432}\u{430}\u{43D}\u{43D}\u{44F} \u{442}\u{430} \u{435}\u{43B}\u{456}\u{43C}\u{456}\u{43D}\u{430}\u{446}\u{456}\u{457}.</p>
           <img src="https://www.madr.rv.ua/wp-content/uploads/2020/03/yakisni-reakcii-organichnux-spolyk-1500x890-1.jpg" alt="\u{41E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{440}\u{435}\u{430}\u{43A}\u{446}\u{456}\u{457}" style="width: 100%; height: auto; margin-bottom: 20px;">
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/2iGq0nUdQFI?si=epE-Bu8FUWHvTNtl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `},{id:6,name:"Біоорганічна хімія",content:`
+        `
+        },
+        {
+            id: 6,
+            name: "\u0411\u0456\u043E\u043E\u0440\u0433\u0430\u043D\u0456\u0447\u043D\u0430 \u0445\u0456\u043C\u0456\u044F",
+            content: `
           <h2>\u{411}\u{456}\u{43E}\u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{430} \u{445}\u{456}\u{43C}\u{456}\u{44F}</h2>
           <p>\u{41E}\u{441}\u{43D}\u{43E}\u{432}\u{438} \u{431}\u{456}\u{43E}\u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{445}\u{456}\u{43C}\u{456}\u{457}
 \u{411}\u{456}\u{43E}\u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{430} \u{445}\u{456}\u{43C}\u{456}\u{44F} \u{454} \u{432}\u{430}\u{436}\u{43B}\u{438}\u{432}\u{43E}\u{44E} \u{433}\u{430}\u{43B}\u{443}\u{437}\u{437}\u{44E} \u{445}\u{456}\u{43C}\u{456}\u{457}, \u{44F}\u{43A}\u{430} \u{434}\u{43E}\u{441}\u{43B}\u{456}\u{434}\u{436}\u{443}\u{454} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{43C}\u{43E}\u{43B}\u{435}\u{43A}\u{443}\u{43B}\u{438}, \u{449}\u{43E} \u{454} \u{447}\u{430}\u{441}\u{442}\u{438}\u{43D}\u{430}\u{43C}\u{438} \u{436}\u{438}\u{432}\u{438}\u{445} \u{441}\u{438}\u{441}\u{442}\u{435}\u{43C}. \u{412}\u{43E}\u{43D}\u{430} \u{437}\u{43E}\u{441}\u{435}\u{440}\u{435}\u{434}\u{436}\u{435}\u{43D}\u{430} \u{43D}\u{430} \u{432}\u{438}\u{432}\u{447}\u{435}\u{43D}\u{43D}\u{456} \u{441}\u{442}\u{440}\u{443}\u{43A}\u{442}\u{443}\u{440}\u{438}, \u{444}\u{443}\u{43D}\u{43A}\u{446}\u{456}\u{457} \u{442}\u{430} \u{440}\u{435}\u{430}\u{43A}\u{446}\u{456}\u{439} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{438}\u{445} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}, \u{449}\u{43E} \u{432}\u{438}\u{43A}\u{43E}\u{43D}\u{443}\u{44E}\u{442}\u{44C} \u{43A}\u{43B}\u{44E}\u{447}\u{43E}\u{432}\u{456} \u{440}\u{43E}\u{43B}\u{456} \u{432} \u{431}\u{456}\u{43E}\u{43B}\u{43E}\u{433}\u{456}\u{447}\u{43D}\u{438}\u{445} \u{43F}\u{440}\u{43E}\u{446}\u{435}\u{441}\u{430}\u{445}.
@@ -1889,8 +1919,13 @@ C
 \u{41F}\u{440}\u{43E}\u{434}\u{43E}\u{432}\u{436}\u{442}\u{435} \u{434}\u{43E}\u{441}\u{43B}\u{456}\u{434}\u{436}\u{435}\u{43D}\u{43D}\u{44F} \u{43C}\u{435}\u{442}\u{430}\u{431}\u{43E}\u{43B}\u{456}\u{447}\u{43D}\u{438}\u{445} \u{448}\u{43B}\u{44F}\u{445}\u{456}\u{432}, \u{443} \u{44F}\u{43A}\u{438}\u{445} \u{431}\u{435}\u{440}\u{443}\u{442}\u{44C} \u{443}\u{447}\u{430}\u{441}\u{442}\u{44C} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}\u{438}, \u{456} \u{43F}\u{43E}\u{44F}\u{441}\u{43D}\u{456}\u{442}\u{44C} \u{457}\u{445} \u{432}\u{430}\u{436}\u{43B}\u{438}\u{432}\u{456}\u{441}\u{442}\u{44C} \u{434}\u{43B}\u{44F} \u{43A}\u{43B}\u{456}\u{442}\u{438}\u{43D}\u{43D}\u{43E}\u{433}\u{43E} \u{43C}\u{435}\u{442}\u{430}\u{431}\u{43E}\u{43B}\u{456}\u{437}\u{43C}\u{443}.
 </p>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbSTb6VLj0gimuf72KORccxZujkMtdgSIag&s" alt="\u{411}\u{456}\u{43E}\u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{430} \u{445}\u{456}\u{43C}\u{456}\u{44F}" style="width: 100%; height: auto; margin-bottom: 20px;">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/HoAedvHZMi4?si=gsDkK4V7HDX3u1G7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `},{id:7,name:"Промислове застосування органічної хімії",content:`
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/liiMiNfv6m4?si=l4g6ET8wPas6e0fG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        `
+        },
+        {
+            id: 7,
+            name: "\u041F\u0440\u043E\u043C\u0438\u0441\u043B\u043E\u0432\u0435 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u043D\u044F \u043E\u0440\u0433\u0430\u043D\u0456\u0447\u043D\u043E\u0457 \u0445\u0456\u043C\u0456\u0457",
+            content: `
           <h2>\u{41F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{435} \u{437}\u{430}\u{441}\u{442}\u{43E}\u{441}\u{443}\u{432}\u{430}\u{43D}\u{43D}\u{44F} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{445}\u{456}\u{43C}\u{456}\u{457}</h2>
           <p>\u{41F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{456} \u{430}\u{441}\u{43F}\u{435}\u{43A}\u{442}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{445}\u{456}\u{43C}\u{456}\u{457}
 \u{41E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{430} \u{445}\u{456}\u{43C}\u{456}\u{44F} \u{43C}\u{430}\u{454} \u{432}\u{430}\u{436}\u{43B}\u{438}\u{432}\u{435} \u{437}\u{43D}\u{430}\u{447}\u{435}\u{43D}\u{43D}\u{44F} \u{434}\u{43B}\u{44F} \u{43F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{43E}\u{441}\u{442}\u{456}, \u{43E}\u{441}\u{43A}\u{456}\u{43B}\u{44C}\u{43A}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}\u{438} \u{432}\u{438}\u{43A}\u{43E}\u{440}\u{438}\u{441}\u{442}\u{43E}\u{432}\u{443}\u{44E}\u{442}\u{44C}\u{441}\u{44F} \u{432} \u{431}\u{430}\u{433}\u{430}\u{442}\u{44C}\u{43E}\u{445} \u{441}\u{444}\u{435}\u{440}\u{430}\u{445} \u{432}\u{438}\u{440}\u{43E}\u{431}\u{43D}\u{438}\u{446}\u{442}\u{432}\u{430}. \u{423} \u{446}\u{44C}\u{43E}\u{43C}\u{443} \u{443}\u{440}\u{43E}\u{446}\u{456} \u{43C}\u{438} \u{440}\u{43E}\u{437}\u{433}\u{43B}\u{44F}\u{43D}\u{435}\u{43C}\u{43E}, \u{44F}\u{43A} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}\u{438} \u{437}\u{430}\u{441}\u{442}\u{43E}\u{441}\u{43E}\u{432}\u{443}\u{44E}\u{442}\u{44C}\u{441}\u{44F} \u{443} \u{432}\u{438}\u{440}\u{43E}\u{431}\u{43D}\u{438}\u{446}\u{442}\u{432}\u{456} \u{43F}\u{43B}\u{430}\u{441}\u{442}\u{43C}\u{430}\u{441}, \u{43B}\u{456}\u{43A}\u{456}\u{432} \u{442}\u{430} \u{444}\u{430}\u{440}\u{431}, \u{430} \u{442}\u{430}\u{43A}\u{43E}\u{436} \u{456}\u{43D}\u{448}\u{456} \u{432}\u{430}\u{436}\u{43B}\u{438}\u{432}\u{456} \u{43F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{456} \u{43F}\u{440}\u{43E}\u{446}\u{435}\u{441}\u{438}.
@@ -1950,8 +1985,13 @@ C
 \u{414}\u{43E}\u{441}\u{43B}\u{456}\u{434}\u{436}\u{443}\u{439}\u{442}\u{435}, \u{44F}\u{43A} \u{43D}\u{43E}\u{432}\u{456} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}\u{438} \u{440}\u{43E}\u{437}\u{440}\u{43E}\u{431}\u{43B}\u{44F}\u{44E}\u{442}\u{44C}\u{441}\u{44F} \u{456} \u{432}\u{438}\u{43A}\u{43E}\u{440}\u{438}\u{441}\u{442}\u{43E}\u{432}\u{443}\u{44E}\u{442}\u{44C}\u{441}\u{44F} \u{443} \u{444}\u{430}\u{440}\u{43C}\u{430}\u{446}\u{435}\u{432}\u{442}\u{438}\u{447}\u{43D}\u{456}\u{439} \u{43F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{43E}\u{441}\u{442}\u{456}.
 \u{420}\u{43E}\u{437}\u{433}\u{43B}\u{44F}\u{43D}\u{44C}\u{442}\u{435} \u{440}\u{456}\u{437}\u{43D}\u{456} \u{432}\u{438}\u{434}\u{438} \u{444}\u{430}\u{440}\u{431} \u{456} \u{457}\u{445} \u{441}\u{43A}\u{43B}\u{430}\u{434}\u{43E}\u{432}\u{456} \u{43A}\u{43E}\u{43C}\u{43F}\u{43E}\u{43D}\u{435}\u{43D}\u{442}\u{438}, \u{430} \u{442}\u{430}\u{43A}\u{43E}\u{436} \u{457}\u{445} \u{437}\u{430}\u{441}\u{442}\u{43E}\u{441}\u{443}\u{432}\u{430}\u{43D}\u{43D}\u{44F} \u{432} \u{43F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{43E}\u{441}\u{442}\u{456}.</p>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYTLlHjLfMGK7soBQQT84cfmj3O-79sHJdrQ&s" alt="\u{41F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{435} \u{437}\u{430}\u{441}\u{442}\u{43E}\u{441}\u{443}\u{432}\u{430}\u{43D}\u{43D}\u{44F} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{445}\u{456}\u{43C}\u{456}\u{457}" style="width: 100%; height: auto; margin-bottom: 20px;">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/hP1Iu2xyHLk?si=jHmyyo-8XLuYI_2L" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `},{id:8,name:"Органічні синтези",content:`
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/CvTmKfuw6g0?si=ppMi7lly4JqpoKmW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        `
+        },
+        {
+            id: 8,
+            name: "\u041E\u0440\u0433\u0430\u043D\u0456\u0447\u043D\u0456 \u0441\u0438\u043D\u0442\u0435\u0437\u0438",
+            content: `
           <h2>\u{41E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{441}\u{438}\u{43D}\u{442}\u{435}\u{437}\u{438}</h2>
           <p>\u{41E}\u{441}\u{43D}\u{43E}\u{432}\u{43D}\u{456} \u{43C}\u{435}\u{442}\u{43E}\u{434}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{433}\u{43E} \u{441}\u{438}\u{43D}\u{442}\u{435}\u{437}\u{443}
 \u{41E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{438}\u{439} \u{441}\u{438}\u{43D}\u{442}\u{435}\u{437} \u{454} \u{43A}\u{43B}\u{44E}\u{447}\u{43E}\u{432}\u{43E}\u{44E} \u{447}\u{430}\u{441}\u{442}\u{438}\u{43D}\u{43E}\u{44E} \u{445}\u{456}\u{43C}\u{456}\u{457}, \u{449}\u{43E} \u{434}\u{43E}\u{437}\u{432}\u{43E}\u{43B}\u{44F}\u{454} \u{441}\u{442}\u{432}\u{43E}\u{440}\u{44E}\u{432}\u{430}\u{442}\u{438} \u{43D}\u{43E}\u{432}\u{456} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{43C}\u{43E}\u{43B}\u{435}\u{43A}\u{443}\u{43B}\u{438} \u{437} \u{43F}\u{440}\u{43E}\u{441}\u{442}\u{456}\u{448}\u{438}\u{445} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}. \u{423} \u{446}\u{44C}\u{43E}\u{43C}\u{443} \u{443}\u{440}\u{43E}\u{446}\u{456} \u{43C}\u{438} \u{440}\u{43E}\u{437}\u{433}\u{43B}\u{44F}\u{43D}\u{435}\u{43C}\u{43E} \u{43E}\u{441}\u{43D}\u{43E}\u{432}\u{43D}\u{456} \u{43C}\u{435}\u{442}\u{43E}\u{434}\u{438} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{433}\u{43E} \u{441}\u{438}\u{43D}\u{442}\u{435}\u{437}\u{443}, \u{457}\u{445}\u{43D}\u{456} \u{43F}\u{440}\u{438}\u{43D}\u{446}\u{438}\u{43F}\u{438} \u{442}\u{430} \u{437}\u{430}\u{441}\u{442}\u{43E}\u{441}\u{443}\u{432}\u{430}\u{43D}\u{43D}\u{44F} \u{443} \u{43D}\u{430}\u{443}\u{446}\u{456} \u{442}\u{430} \u{43F}\u{440}\u{43E}\u{43C}\u{438}\u{441}\u{43B}\u{43E}\u{432}\u{43E}\u{441}\u{442}\u{456}.
@@ -2001,6 +2041,37 @@ C
 \u{420}\u{43E}\u{437}\u{440}\u{43E}\u{431}\u{456}\u{442}\u{44C} \u{43F}\u{440}\u{43E}\u{441}\u{442}\u{438}\u{439} \u{441}\u{438}\u{43D}\u{442}\u{435}\u{442}\u{438}\u{447}\u{43D}\u{438}\u{439} \u{43C}\u{430}\u{440}\u{448}\u{440}\u{443}\u{442} \u{434}\u{43B}\u{44F} \u{441}\u{442}\u{432}\u{43E}\u{440}\u{435}\u{43D}\u{43D}\u{44F} \u{43E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{43E}\u{457} \u{441}\u{43F}\u{43E}\u{43B}\u{443}\u{43A}\u{438}, \u{432}\u{438}\u{43A}\u{43E}\u{440}\u{438}\u{441}\u{442}\u{43E}\u{432}\u{443}\u{44E}\u{447}\u{438} \u{43A}\u{456}\u{43B}\u{44C}\u{43A}\u{430} \u{437} \u{43E}\u{43F}\u{438}\u{441}\u{430}\u{43D}\u{438}\u{445} \u{43C}\u{435}\u{442}\u{43E}\u{434}\u{456}\u{432}.
 </p>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfY0h2rWcF3U-OvdR1k1kcobk13YoK6Qh0mg&s" alt="\u{41E}\u{440}\u{433}\u{430}\u{43D}\u{456}\u{447}\u{43D}\u{456} \u{441}\u{438}\u{43D}\u{442}\u{435}\u{437}\u{438}" style="width: 100%; height: auto; margin-bottom: 20px;">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/5ftJO5EtdWA?si=Ew-aNMWzStcUZcSg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `}],D=document.getElementById("lessonsContainer"),E=document.getElementById("lessonModal"),B=document.getElementById("lessonContent");u.forEach(u=>{let F=document.createElement("button");F.className="lesson-button",F.textContent=u.name,F.addEventListener("click",()=>{B.innerHTML=u.content,E.style.display="flex"}),D.appendChild(F)}),E.addEventListener("click",u=>{u.target===E&&(E.style.display="none")});let F=document.getElementById("profileCircle"),C=JSON.parse(localStorage.getItem("loggedInUser"));C?(F.textContent=C.name[0].toUpperCase(),F.style.backgroundColor="#007bff",F.style.display="flex",F.addEventListener("click",()=>{localStorage.removeItem("loggedInUser"),window.location.reload()})):F.style.display="none"});
-//# sourceMappingURL=lessons2.d32696cf.js.map
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/HsV95KxtaSU?si=lH2sFSWVcCN2_0H8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        `
+        }
+    ];
+    const lessonsContainer = document.getElementById("lessonsContainer");
+    const lessonModal = document.getElementById("lessonModal");
+    const lessonContent = document.getElementById("lessonContent");
+    lessons.forEach((lesson)=>{
+        const lessonButton = document.createElement("button");
+        lessonButton.className = "lesson-button";
+        lessonButton.textContent = lesson.name;
+        lessonButton.addEventListener("click", ()=>{
+            lessonContent.innerHTML = lesson.content;
+            lessonModal.style.display = "flex";
+        });
+        lessonsContainer.appendChild(lessonButton);
+    });
+    lessonModal.addEventListener("click", (event)=>{
+        if (event.target === lessonModal) lessonModal.style.display = "none";
+    });
+    const profileCircle = document.getElementById("profileCircle");
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (user) {
+        profileCircle.textContent = user.name[0].toUpperCase();
+        profileCircle.style.backgroundColor = "#007bff";
+        profileCircle.style.display = "flex";
+        profileCircle.addEventListener("click", ()=>{
+            localStorage.removeItem("loggedInUser");
+            window.location.reload();
+        });
+    } else profileCircle.style.display = "none";
+});
+
+//# sourceMappingURL=lessons2.eaebb463.js.map
