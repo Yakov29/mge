@@ -386,7 +386,7 @@ O
 22.4
 22.4 л.</p>
         <img src="https://bcdn.products.pcc.eu/wp-content/uploads/2024/05/FOT-2-stechiometria.jpg" alt="Стихіометрія" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/DHZLuHcQ6tM?si=EnSmUbtVBHVHraP5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -713,7 +713,7 @@ pH вимірюється за допомогою pH-метрів або інд�
 Опишіть властивості алканів, алкенів і алкінів, наводячи приклади.
 Поясніть, чому спирти мають високі точки кипіння в порівнянні з відповідними вуглеводнями.</p>
         <img src="https://web.posibnyky.vntu.edu.ua/iebmd/gordiyenko_organ_himiya/images/first.jpg" alt="Органічна хімія" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/RZ5qwOSNKoU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/TSex53M15rc?si=jXEJ_rgs9KrGeJiw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -796,7 +796,7 @@ pH вимірюється за допомогою pH-метрів або інд�
 Опишіть, як властивості полімерів впливають на їх застосування в різних промислових сферах.
 </p>
         <img src="https://cpsm.kpi.ua/images/statti/polimery.jpg" alt="Полімери" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/8kuABr1MfxY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/itAbG9lftvA?si=EGBpRh0q6WKIZEQs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -903,7 +903,7 @@ Zn∣ZnSO
 Поясніть, як працює батарея на основі електрохімічних процесів.
 </p>
         <img src="https://press.ocenin.ru/wp-content/uploads/2019/05/1-4.jpg" alt="Електрохімія" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ixrp3AptcPM?si=nMh9r1G8NV3-R8_S" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -976,7 +976,7 @@ Zn∣ZnSO
 Поясніть, як вуглеводи і ліпіди відрізняються за своїми функціями і структурами.
 </p>
         <img src="https://score.palace.kiev.ua/wp-content/uploads/2020/06/00c1fda33ab7.jpg" alt="Біохімія" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VZHNI0rZHRg?si=qHI0DgG1cvol0K0g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -1060,7 +1060,7 @@ l — товщина поглинаючого шару.
 Використати хроматографію для аналізу суміші і описати, як відбувається розділення компонентів.
 </p>
         <img src="https://courses20.zsmu.edu.ua/asset-v1:zsmu+ACD_Ph1_C06+2018+type@asset+block@%D0%BA%D1%80%D0%BE%D0%BA_1.jpg" alt="Аналітична хімія" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/a-rizNRX-ZU?si=4KpbpZUoW-qfdBhO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
   ];

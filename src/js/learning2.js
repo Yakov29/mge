@@ -1919,7 +1919,7 @@ C
 Продовжте дослідження метаболічних шляхів, у яких беруть участь органічні сполуки, і поясніть їх важливість для клітинного метаболізму.
 </p>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbSTb6VLj0gimuf72KORccxZujkMtdgSIag&s" alt="Біоорганічна хімія" style="width: 100%; height: auto; margin-bottom: 20px;">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/HoAedvHZMi4?si=gsDkK4V7HDX3u1G7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/liiMiNfv6m4?si=l4g6ET8wPas6e0fG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         `,
     },
     {
@@ -1985,7 +1985,7 @@ C
 Досліджуйте, як нові органічні сполуки розробляються і використовуються у фармацевтичній промисловості.
 Розгляньте різні види фарб і їх складові компоненти, а також їх застосування в промисловості.</p>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYTLlHjLfMGK7soBQQT84cfmj3O-79sHJdrQ&s" alt="Промислове застосування органічної хімії" style="width: 100%; height: auto; margin-bottom: 20px;">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/hP1Iu2xyHLk?si=jHmyyo-8XLuYI_2L" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/CvTmKfuw6g0?si=ppMi7lly4JqpoKmW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         `,
     },
     {
@@ -2041,7 +2041,7 @@ C
 Розробіть простий синтетичний маршрут для створення органічної сполуки, використовуючи кілька з описаних методів.
 </p>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfY0h2rWcF3U-OvdR1k1kcobk13YoK6Qh0mg&s" alt="Органічні синтези" style="width: 100%; height: auto; margin-bottom: 20px;">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/5ftJO5EtdWA?si=Ew-aNMWzStcUZcSg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/HsV95KxtaSU?si=lH2sFSWVcCN2_0H8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         `,
     },
   ];

@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 Виконайте хроматографічний аналіз суміші органічних сполук та проаналізуйте отримані результати.
 </p>
         <img src="https://udhtu.edu.ua/wp-content/uploads/2017/07/4340eb393a20c86afaa7406b627.jpg" alt="Вступ до аналітичної хімії" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/n24H7_M--Kk?si=sxEB3PoBwp3onbsp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -162,7 +162,7 @@ V - об'єм.
 Виберіть один вид титриметрії і поясніть, як він застосовується для аналізу конкретних речовин.
 </p>
         <img src="https://naurok.com.ua/uploads/files/3454623/305977/332781_images/16.jpg" alt="Титриметричний аналіз" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/-DGPTMTWvng?si=2RP_Nc7SVru4wYcf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -297,8 +297,8 @@ l — товщина шару.
 Завдання
 Виконайте вимірювання поглинання розчину на різних довжинах хвиль і побудуйте спектр поглинання.
 Розрахуйте концентрацію речовини в розчині за допомогою отриманих даних та закону Бера-Ламберта.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Spektrofotometri.jpgм" alt="Спектрофотометрія" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Spektrofotometri.jpg" alt="Спектрофотометрія" style="width: 100%; height: auto; margin-bottom: 20px;">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/SCR3pReIu_U?si=hfuLZwd4TOWIN3Sv" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -368,7 +368,7 @@ l — товщина шару.
 Вивчіть методику газової хроматографії і застосуйте її для аналізу летючих сполук.
 </p>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzsMRg_tw5wmv2XtuZqMdActwY8wr1ug9JEg&usqp=CAU" alt="Хроматографія" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/oGj0gWDkbOU?si=68i946k1Yh3ld2Qt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -444,7 +444,7 @@ C — питома теплоємність речовини,
 Проведіть експеримент за допомогою диференційного скануючого калориметра для дослідження фазових переходів у матеріалі.
 </p>
         <img src="https://www.labiopro.com/uploads/pics/omnia_600x600px_5.jpg" alt="Калориметрія" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/IOwKm-1RJ0k?si=k9CncLTHigkw9L7J" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -520,7 +520,7 @@ pH-метрія:
 Застосуйте вольтамперометрію для дослідження електрохімічних реакцій у лабораторних умовах.
 </p>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-JUeYedyYykZVjkNjSKg5r_sVQpFVWX4VCKo3rGfnUKVGznD8g9JS9Vtu8HnckzZ6exE&usqp=CAU" alt="Електрохімічні методи аналізу" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/v0H6_Jyqh3c?si=Ytaxym4a1kQh5-fc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -607,7 +607,7 @@ pH-метрія:
 Аналізуйте мас-спектри для ідентифікації органічних молекул у лабораторії.
 </p>
         <img src="https://naurok.com.ua/uploads/files/36948/287130/314838_images/8.jpg" alt="Спектральні методи аналізу" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/vUnviAX5vgU?si=qNnnYMRx5nY3_kqn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -703,7 +703,7 @@ pH-метрія:
 Проведіть екстракцію органічних сполук з природних зразків для подальшого аналізу.
 </p>
         <img src="https://alt.ua/wp-content/uploads/2020/09/18424-1.jpg" alt="Методи пробопідготовки" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ji85t_3Kji4?si=DILoqD9MPDF5OpTp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -798,7 +798,7 @@ pH-метрія:
 Застосуйте колориметрію для визначення концентрації в розчині на основі інтенсивності кольору.
 </p>
         <img src="https://otava.ua/storage/app/uploads/public/615/c08/824/615c088247a27505366735.jpg" alt="Якісний аналіз" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/k6TfhsH0UJI?si=mv1Yoaq3KOmq1GPn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
     {
@@ -926,7 +926,7 @@ pH-метрія:
 Використовуйте хроматографію для аналізу суміші органічних сполук.
 </p>
         <img src="https://poradu.pp.ua/uploads/posts/2015-09/klksniy-analz-hmchn-metodi-analzu-analtichna-hmya_241.jpeg" alt="Кількісний аналіз" style="width: 100%; height: auto; margin-bottom: 20px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9lY_aKN85VQ?si=6NeUJ3PHAbjhuvdc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `,
     },
   ];
